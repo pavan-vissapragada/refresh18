@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Refresh</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+  <link rel="icon" size="32x32" type="image/png" href="images/v2.png"/>
+	<link rel="stylesheet" href="css/utils.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/main.css">
+  	<link rel="stylesheet" href="css/speakers.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
+<script src="js/jquery_min.js"></script>
+<script src="js/jmodal.js"></script>
+<link rel="stylesheet" href="css/jmodal.css">
+<script src="js/jpanel.js"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124029490-1');
+	function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+$( document ).ready(function() {
+	var jPM = $.jPanelMenu({
+    menu: '#menu',
+    trigger: '.menu-trigger',
+    duration: 300,
+		excludedPanelContent: '.stay-on-top'
+
+	});
+	jPM.on();
+	$('.clickMenu').click(function() {
+		$(this).children("a").click();
+	})
+});
+</script>
+
+
+<!-- <script src='//cdn.zarget.com/61608/70421.js'></script>
+<link href="/assets/css/site-23c14408.css" rel="stylesheet"> -->
+<script type="text/javascript">
+  if (window.localStorage.getItem('fw_cookie_opt_out') !== 'yes') {
+    window.fw_trigger_ads = 'yes';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'trigger_ads' });
+  }
+</script>
+
+</head>
+<body>
+<a class="fixed-button-wrapper stay-on-top" href="https://register.refresh18.com/">Register Now</a>
+<header class="main stay-on-top">
+	    <ul id="menu" style="display: none;">
+	        <li class="clickMenu"><a href="#why-attend">Why Attend</a></li>
+	        <li class="clickMenu"><a href="#venue">Venue</a></li>
+	        <li class="clickMenu"><a href="agenda.html">Full Agenda</a></li>
+	        <li class="clickMenu"><a href="#speakers">Speakers</a></li>
+					<li class="clickMenu"><a href="faq.html">FAQ</a></li>
+	    </ul>
+	    <div id="trigger">
+				<a href="javascript:void(0);" class="icon menu-trigger">
+					<i class="fa fa-bars"></i>
+				</a>
+				<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+
+			</div>
+</header>
+<dheader class="stay-on-top">
+		<div class="wrap content-grid">
+			<div class="logo-wrapper">
+		    <a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a href="/" class="logo fleft"></a>
+			</div>
+			<nav class="fright right-nav" id="top-nav">
+				<ul class="float-block clearfix">
+					<li class="sub-nav">
+							<a href="javascript:void(0)">Attend</a>
+						<ul>
+							<li><a href="#why-attend">Why Attend</a></li>
+							<li><a href="#venue">Venue</a></li>
+						</ul>
+					</li>
+					<li class="sub-nav">
+						<a href="javascript:void(0)">Agenda</a>
+						<ul>
+							<li><a href="agenda.html">Full Agenda</a></li>
+							<li><a href="#speakers">Speakers</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="faq.html">FAQ</a>
+					</li>
+				</ul>
+				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
+			</nav>
+		</div>
+</dheader>
+
+<section class="agenda-bg">
+	<div class="text-center">
+		<h2>Speakers</h2>
+	</div>
+</section>
+
+<section class="speaker" id="speakers">
+	<h1>Speakers</h1>
+
+	<div class="wrap content-grid">
+		<ul class="speakers-list float-block clearfix">
+			<li>
+				<div class="photo">
+					<img src="images/julie.png" alt="">
+				</div>
+				<h5>Kate leggett</h5>
+				<p>VP & Principal Analyst<br>Forrester Research</p>
+				<a href="#ex1" rel="modal:open">View Bio</a>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-2.png" alt="">
+				</div>
+				<h5>Troy DuMoulin</h5>
+				<p>VP, Research & Development<br>Pink Elephant</p>
+				<a href="#ex2" rel="modal:open">View Bio</a>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/TroyDuMoulin" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/troy-dumoulin-148235/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-1.png" alt="">
+				</div>
+				<h5>Girish Mathrubootham</h5>
+				<p>CEO <br>Freshworks</p>
+				<a href="#ex3" rel="modal:open">View Bio</a>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/mrgirish" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>Julie mohr</h5>
+				<p>Author, Speaker & Consultant</p>
+				<a href="#ex4" rel="modal:open">View Bio</a>
+
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>Stephen mann</h5>
+				<p>Principal Analyst and Content Director<br>ITSM.tools</p>
+				<a href="#ex5" rel="modal:open">View Bio</a>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>David Thompson</h5>
+				<p>CMO <br>Freshworks</p>
+				<a href="#">View Bio</a>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<p class="text-center announce">More speakers to be announced soon...</p>
+
+
+
+<section class="ready text-center">
+	<div class="wrap content-grid">
+		<h1>Are you ready to learn, connect, get inspired and have fun?</h1>
+		<p>Refresh 18 is the place for you. Register now and grab your seat. We’re selling out!</p>
+		<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
+	</div>
+</section>
+
+<div class="footer">
+	<div class="l-page content-grid">
+		<div class="footer-content">
+			<div class="footer-content-left">
+				<p class="footer-para">CONNECT WITH US:</p>
+				<div class="footer-social">
+					<a class="sprite-fb-white" target="_blank" href="https://www.facebook.com/FreshworksInc/"></a>
+					<a class="sprite-tw-white" target="_blank" href="https://twitter.com/freshworksinc?lang=en"></a>
+					<a class="sprite-ln-white" target="_blank" href="https://in.linkedin.com/company/freshworks-inc"></a>
+				</div>
+				<p class="copyright">
+					<a href="https://www.freshworks.com/privacy/"><span class="privacy-link">Privacy Policy</span></a>© 2018 Freshworks Inc. </p>
+			</div>
+			<div class="footer-content-center"> </div>
+			<div class="footer-content-right">
+				<p>GET IN TOUCH WITH US:</p>
+				<a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a>
+			</div>
+		</div>
+		<div class="footer-right"></div>
+	</div>
+</div>
+<div id="ex1" class="modal">
+	<div class="modal-content-wrapper">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper">
+				<div class="photo">
+					<img src="images/julie.png" alt="">
+				</div>
+				<h5>Kate leggett</h5>
+				<p>VP & Principal Analyst<br>Forrester Research</p>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>	
+				Kate is a leading market analyst for CRM and customer service solutions. She is a seasoned High-tech professional with extensive product marketing, product management and operations experience. 			
+				</p>
+			</div>
+		</div>
+	</div>
+	
+	<div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
+</div>
+<div id="ex2" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+			<div class="photo">
+				<img src="images/speaker-2.png" alt="">
+			</div>
+			<h5>Troy DuMoulin</h5>
+			<p>VP, Research & Development<br>Pink Elephant</p>
+			<!-- <a href="">View Bio</a> -->
+			<ul class="social-link float-block clearfix">
+				<li><a href="https://twitter.com/TroyDuMoulin" target="_blank" class="sprite-tw-grey"></a></li>
+				<li><a href="https://www.linkedin.com/in/troy-dumoulin-148235/" target="_blank" class="sprite-ln-grey"></a></li>
+			</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Troy is a leading ITIL® IT Governance and Lean IT authority with a solid and rich background in Executive IT Management consulting. Troy holds the ITIL Expert certifications and has extensive experience in leading IT Service Management (ITSM) programs with a regional and global scope.<br><br>
+				He is a frequent speaker at IT Management events and is a contributing author to multiple ITSM and Lean IT books, papers and official ITIL publications including ITIL’s Planning To Implement IT Service Management and Continual Service Improvement.		
+				</p>
+		</div>
+	</div>
+</div>
+<div id="ex3" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+			<div class="photo">
+					<img src="images/speaker-1.png" alt="">
+				</div>
+				<h5>Girish Mathrubootham</h5>
+				<p>CEO <br>Freshworks</p>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/mrgirish" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Girish Mathrubootham is the founder and CEO of Freshworks, one of the world’s fastest-growing SaaS product company, winning the Economic Times Startup of the Year in 2016, and the Business Standard Startup of the Year in 2017. Freshworks now has a suite of products for businesses worldwide - Freshdesk, Freshservice, Freshsales, Freshcaller, Freshteam, Freshchat and Freshmarketer.
+					<br><br>
+				Girish is part of the Product Council for NASSCOM, the trade association of Indian software companies, and actively works to promote and nurture software product companies. He has invested in several early stage startups, and is passionate about building a global product company. Having set the vision and direction for the company since inception, his focus on Freshworks’ values and its culture have been instrumental in taking the organisation to where it is today.</p>
+		
+		</div>
+	</div>
+</div>
+<div id="ex4" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>Julie mohr</h5>
+				<p>Author, Speaker & Consultant</p>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Julie is a dynamic, engaging change agent who brings authenticity, integrity, and passion to practitioners worldwide. Through her books, articles, speaking, consulting, and teaching — her purpose is to spark change in the world with thought-provoking dialog and interaction. Julie has a B.S. degree in computer science from The Ohio State University, a MaED from the University of Phoenix, and is currently pursuing her Ph.D. in Management and Organizational Leadership in Information Systems & Technology from the University of Phoenix. She is an ITIL Expert, Certified Help Desk Director, and Certified Governance IT Professional.
+					<br>
+					Julie captivates audiences at conferences worldwide on topics of authentic leadership, business strategy, knowledge management, organizational culture, and innovation.</p>
+		
+		</div>
+	</div>
+</div>
+<div id="ex5" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>Stephen mann</h5>
+				<p>Principal Analyst and Content Director<br>ITSM.tools</p>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Stephen is Principal Analyst and Content Director at the ITSM-focused industry analyst firm ITSM.tools. Also an independent IT and IT service management marketing content creator, and a frequent blogger, writer, and presenter on the challenges and opportunities for IT service management professionals.
+						If more is needed...
+						<br><br>
+						Stephen previously held positions in IT research and analysis (at IT industry analyst firms Ovum and Forrester and the UK Post Office), IT service management consultancy, enterprise IT service desk and IT service management, IT asset management, innovation and creativity facilitation, project management, finance consultancy, internal audit, and product marketing for a SaaS IT service management technology vendor.</p>
+		
+		</div>
+	</div>
+</div>
+<div id="ex6" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+			<div class="photo">
+				<img src="images/speaker-3.png" alt="">
+			</div>
+			<h5>David Thompson</h5>
+			<p>CMO <br>Freshworks</p>
+			<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+			</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>David as an Industry thought-leader in digital marketing and emerging technology sectors including webconferencing, digital marketing, data science, collaboration, online marketplaces. He has a deep understanding of positioning, M&A, fundraising, board management, public company operations and strategy.</p>
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
