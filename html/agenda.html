@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="css/agenda.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/media-queries.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
 	<!-- <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -46,6 +47,9 @@
 
 			});
 			jPM.on();
+			$('.clickMenu').click(function() {
+				$('.menu-trigger').click();
+			})
 
 $(".tabmenus .active").trigger('click')
 
@@ -73,50 +77,37 @@ $(".readmore").on('click',function(){
 </head>
 
 <body>
-	<a class="fixed-button-wrapper stay-on-top" href="https://register.refresh18.com/">Register Now</a>
 	<header class="main stay-on-top">
-		<ul id="menu" style="display: none;">
-			<li><a href="../#why-attend">Why Attend</a></li>
-			<li><a href="../#venue">Venue</a></li>
-			<li><a href="#">Full Agenda</a></li>
-			<li><a href="../#speakers">Speakers</a></li>
-			<li><a href="faq.html">FAQ</a></li>
+	    <ul id="menu" style="display: none;">
+			<li class="clickMenu"><a href="#about">About</a></li>
+			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
+			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
+			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
+			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
 		</ul>
-		<div id="trigger">
-			<a href="javascript:void(0);" class="icon menu-trigger">
-				<i class="fa fa-bars"></i>
-			</a>
-			<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+	    <div id="trigger">
+				<a href="javascript:void(0);" class="icon menu-trigger">
+					<i class="fa fa-bars"></i>
+				</a>
+				<div class="logo-wrapper"><a href="/" class="logo"></a></div>
 
-		</div>
-	</header>
-	<dheader class="stay-on-top">
-		<div class="wrap">
+			</div>
+</header>
+<dheader class="stay-on-top">
+		<div class="wrap content-grid">
 			<div class="logo-wrapper">
-				<a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+		    <a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
 					<i class="fa fa-bars"></i>
 				</a>
 				<a href="/" class="logo fleft"></a>
 			</div>
 			<nav class="fright right-nav" id="top-nav">
 				<ul class="float-block clearfix">
-					<li class="sub-nav">
-						<a href="javascript:void(0)">Attend</a>
-						<ul>
-							<li><a href="../#why-attend">Why Attend</a></li>
-							<li><a href="../#venue">Venue</a></li>
-						</ul>
-					</li>
-					<li class="sub-nav">
-						<a href="javascript:void(0)">Agenda</a>
-						<ul>
-							<li><a href="#">Full Agenda</a></li>
-							<li><a href="../#speakers">Speakers</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="faq.html">FAQ</a>
-					</li>
+					<li><a href="#about">About</a></li>
+					<li><a href="agenda.html">Agenda</a></li>
+					<li><a href="speakers.html">Speakers</a></li>
+					<!-- <li><a href="venue.html">Venue</a></li> -->
+					<li><a href="faq.html">FAQ</a></li>
 				</ul>
 				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
 			</nav>

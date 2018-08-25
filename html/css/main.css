@@ -23,8 +23,12 @@ body {
   src: url("../fonts/SourceSansPro-Bold.otf") format("opentype");
 }
 
-dheader a:hover, header a:hover {
+dheader li a:hover, 
+header li a:hover {
   color: #f84d74;
+}
+dheader .btn-primary{
+  margin-left: 2rem;
 }
 
 .wrap {
@@ -58,7 +62,7 @@ dheader .wrap {
 }
 
 dheader nav a {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300;
   letter-spacing: 0.8px;
   text-align: center;
@@ -66,6 +70,7 @@ dheader nav a {
   text-transform: uppercase;
   padding: 0 10px;
   margin-left: 1rem;
+  transition: color 0.2s;
 }
 
 dheader nav ul li {
@@ -114,28 +119,10 @@ dheader nav ul li ul a {
   transition: color 0.3s;
 }
 
+dheader nav a.active,
 dheader nav ul li ul a:hover {
   color: #f84d74;
 }
-
-dheader nav li.sub-nav:before, dheader nav li.sub-nav:after {
-  content: '';
-  border: 6px solid;
-  border-color: #fff transparent transparent transparent;
-  position: absolute;
-  right: -9px;
-  top: 11px;
-  z-index: 0;
-  opacity: 0.5;
-}
-
-dheader nav li.sub-nav:before {
-  top: 9px;
-  border-color: #131735 transparent transparent transparent;
-  opacity: 1;
-  z-index: 1;
-}
-
 
 dheader nav ul li ul:hover {
 	display: block;
@@ -145,15 +132,12 @@ dheader nav ul li ul:hover {
 .logo{
   position: relative;
 	display: block;
-	margin-top: 10px;
-	width: 130px;
-	height: 30px;
+	width: 200px;
+	height: 40px;
 	background: url(../images/logo.svg);
 	background-size: contain;
 	background-repeat: no-repeat;
 }
-
-
 
 .refresh-img {
 		width: 280px;
@@ -172,7 +156,7 @@ dheader nav ul li ul:hover {
   margin: 0 auto -10px auto;
 }
 
-.freshworks-logo, .intro span {
+.freshworks-logo, .intro .presents {
   position: relative;
   top: 10px;
 }
@@ -189,25 +173,28 @@ dheader nav ul li ul:hover {
   align-items: center;
 }
 
-.intro span {
+.intro .presents {
   font-family: "Source Sans Pro";
   letter-spacing: 0.5px;
   opacity: 0.5;
 }
 
 .intro h5 {
-  font-size: 1.175rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 0.9px;
+  letter-spacing: 2.5px;
   margin: 30px 0;
+}
+.intro h5 span:before{
+  content: '| ';
 }
 
 .intro h3 {
-  font-size: 2.25rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 100;
   margin: 20px 0 30px 0;
 }
 
@@ -229,24 +216,52 @@ dheader nav ul li ul:hover {
   padding: 50px 0;
 }
 
-.why-attend h2 {
-  color: #4a4a4a;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.4;
-  margin-top: 0;
+.why-attend{
+  padding: 0;
 }
-
 .why-attend p {
   color: #666666;
   font-size: 1.25rem;
 }
 
+.grid-block{
+  height: 345px;
+  width: 25%;
+  background-color: #131735;
+  overflow: hidden;
+}
+.grid-block h2{
+  position: relative;
+  color: #fff;
+  font-size: 40px;
+  line-height: 48px;
+  padding: 30px;
+  margin: 0;
+}
+.grid-block h2:after{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 91px;
+  border-bottom: 3px solid #FC5B6C;
+  margin-top: 20px;
+}
+.why-attend .float-block:last-child h2:after{
+  border-bottom: 3px solid #25C8F9;
+}
+.grid-block img{
+  width: 100%;
+}
+.view-all-speakers a{
+  display: inline-block;
+  line-height: 27px;
+  margin-top: 20px;
+}
+
 .convince {
   position: relative;
-  /* background-color: #131735; */
-	background: url(../images/convince.png);
-	background-size: 100% 100%;
+	background: url(../images/convince.png) no-repeat left center #131735;
+	background-size: 100% auto;
   padding: 25px 0;
   overflow: hidden;
 }
@@ -263,20 +278,26 @@ dheader nav ul li ul:hover {
 }
 
 .speakers-list {
-  max-width: 950px;
+  max-width: 960px;
   padding-top: 30px;
   margin: 0 auto;
 }
 
 .speakers-list>li {
-  width: 242px;
+  width: 240px;
   height: 388px;
   border-radius: 3px;
-  box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.07);
-  background-color: #ffffff;
-  border: solid 0 #ebebeb;
+  border: 1px solid #EBEBEB;
+  box-shadow: none;
+  background-color: #ffffff;  
   padding: 10px;
   margin-right: 80px;
+  transition: box-shadow 0.2s;
+  margin-bottom: 20px;
+}
+.speakers-list > li:hover{
+  border-color: transparent;
+  box-shadow: 0 2px 7px 2px rgba(0,0,0,0.07);
 }
 
 .speakers-list li:last-child {
@@ -329,8 +350,50 @@ dheader nav ul li ul:hover {
 }
 
 .map-container {
-  margin-bottom: -8px;
-  padding: 1rem 1rem;
+  height: 430px;
+  background: url(../images/map-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.map-container .row{
+  height: 100%;
+}
+.map-info {
+  display: table;
+  border-radius: 3px;
+  background-color: #FFF;
+  box-shadow: 0 2px 5px 1px rgba(128,128,128,0.5);
+  padding: 30px 50px;
+  margin: 0 auto;
+}
+.map-info h4 {
+  color: #333333;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.54px;
+  line-height: 24px;
+  margin: 0;
+}
+.map-info p {
+  color: #4D4D4D;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.42px;
+  line-height: 28px;
+  margin: 10px 0 25px 0;
+}
+.btn-primary.transparent{
+  color: #FC5B6C;
+  letter-spacing: 0.7px;
+  border-radius: 3px;
+  border: 1px solid #FC5B6C;
+  background-color: #fff;
+  padding: 8px 28px;
+  transition: background 0.2s;
+}
+.btn-primary.transparent:hover{
+  background-color: rgba(252, 91, 108, 0.05);
 }
 
 .ready {
@@ -352,8 +415,6 @@ dheader nav ul li ul:hover {
 .ready .btn-primary {
 	margin-left: 0;
 }
-
-
 
 dheader .dropdown-nav {
 	display: none;
@@ -405,163 +466,6 @@ dheader .dropdown-nav {
 	display: none;
 }
 
-/* Media Query */
-
-@media screen and (max-width: 767px) {
-  dheader .wrap {
-    display: flex;
-    align-items: center;
-		flex-direction: column;
-    padding: 0;
-    position: relative;
-    padding: 0 15px;
-		border-bottom: 0.5px solid #8c8b8b;
-		padding-bottom: 10px;
-  }
-  dheader nav a {
-    font-size: 0.875rem;
-  }
-	dheader nav li ul li a {
-		 font-size: 0.875rem;
-	}
-  ddheader nav ul {
-    display: none;
-		display: flex;
-  }
-  dheader nav ul li {
-    margin-left: 10px;
-  }
-  dheader .icon {
-    display: none;
-    flex: 1;
-    width: 0;
-  }
-	dheader .dropdown-nav {
-		display: none;
-	}
-	dheader .wrap .logo-wrapper .right-nav {
-		display: none;
-	}
-	dheader .rmenu>ul {
-		display: block;
-		transform: translateX(-50%);
-	}
-  .btn-primary {
-    font-size: 0.625rem;
-    padding: 0.5rem 0.5rem;
-  }
-  .wrap .logo {
-    align-self: center;
-  }
-  .wrap .fright {
-    margin-top: 0;
-    padding: 0;
-  }
-	.why-attend h1 {
-		padding: 0 0 10px 0;
-	}
-	.why-attend .cell {
-		padding: 20px 0;
-	}
-  .why-attend .row:nth-child(odd) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /* margin: 0.5rem 1rem; */
-  }
-  .why-attend .row:nth-child(even) {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    /* margin: 0.5rem 1rem; */
-  }
-	.why-attend .wrap .row .cell img {
-		width: 100%;
-		height: auto;
-	}
-
-  .pr70 {
-    padding-right: 10px !important;
-  }
-  .pl70 {
-    padding-left: 10px !important;
-  }
-  .row .cell {
-    width: initial;
-    display: initial;
-  }
-  .ready p {
-    padding: 0 0.5rem;
-  }
-  .ready h1 {
-    font-size: 2.3rem;
-  }
-  .speakers-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-	.speakers-list li h5 {
-		   font-size: 1.75rem;
-	}
-	.speakers-list li p {
-		font-size: 1.35rem;
-	}
-
-  .speakers-list>li {
-		height: 395px;
-    margin-bottom: 2rem;
-    margin-right: 0;
-  }
-	.announce {
-			font-size: 1.75rem;
-	}
-  .venue .map-container {
-    padding: 1rem 1.25rem;
-  }
-
-	.select-track {
-		display: block;
-	}
-	.select-track-responsive {
-		display: none;
-	}
-
-  .select-track .wrap {
-    max-width: 910px;
-  }
-  .track-list h4 {
-    font-size: 1.65rem;
-  }
-  .track-list time {
-    font-size: 1rem;
-  }
-  .track-list h6 {
-    font-size: 1.45rem;
-  }
-  .agenda-note {
-    font-size: 0.5rem;
-  }
-	#agenda-tabs ul {
-		display: none;
-	}
-	.convince {
-	  position: relative;
-	  /* background-color: #131735; */
-		background: url(../images/convince-sm.png);
-		background-size: 100% 100%;
-	  padding: 25px 0;
-	  overflow: hidden;
-		display: flex;
-		justify-content: center;
-	}
-	.convince h3 {
-		width: 300px;
-	}
-}
-
 
 /* Jpanel */
 
@@ -569,30 +473,6 @@ header {
 	display: none;
 	width: 100vw;
 	top: 0;
-}
-
-@media screen and (max-width: 767px)  {
-	body {
-		font-size: 0.875rem;
-	}
-	header {
-		display: block;
-	}
-	dheader {
-		display: none;
-	}
-	.why-attend .row:nth-child(even) .pl70 {
-		padding-right: 0;
-	}
-	.why-attend h2 {
-		font-weight: 500;
-	}
-	.map-container iframe {
-		height: 30rem;
-	}
-	#trigger .logo-wrapper .logo {
-		margin-left: -3rem;
-	}
 }
 
 #trigger {
@@ -621,15 +501,16 @@ header {
 }
 
 #jPanelMenu-menu li {
-		font-size: 1rem;
-    /* font-weight: 600; */
-    padding: 10px 10px;
-    border-bottom: 0.5px solid #8c8b8b;
+	font-size: 1rem;
+  border-bottom: 0.5px solid rgba(252, 91, 108, 0.6);
 }
 
 #jPanelMenu-menu li a {
+  display: block;
 	font-weight: 400;
+  text-transform: uppercase;
 	color: #fff;
+  padding: 12px 15px;
 }
 
 #jPanelMenu-menu li a:hover {
@@ -645,39 +526,7 @@ body {
 .icon {
   font-size: 1.25rem;
   color: #ffffff;
-	margin: 0.5rem;
-	width: 10%;
-}
-
-@media screen and (min-width: 768px)  {
-	.icon {
-		display: none;
-	}
-	.fixed-button-wrapper {
-		display: none;
-	}
-	.select-track {
-		display: block;
-	}
-	.select-track-responsive {
-		display: none;
-	}
-	.why-attend .row {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-	#why-attend h2 {
-		 -webkit-margin-after: 10px;
-	}
-	#why-attend p {
-		  -webkit-margin-before: 0;
-	}
-	.why-attend .row:nth-child(even) .pl70 {
-		padding-right: 50px;
-	}
-	.fixed-button-wrapper {
-		display: none !important;
-	}
+	padding: 10px 15px;
 }
 
 /* Style for register now button */
@@ -707,20 +556,10 @@ body {
 	margin: 0 auto;
 	width: calc(100% - 5rem); // mobile
 }
-@media screen and (min-width: 768px)  {
-	.content-grid {
-		width: calc(100% - 17.5rem);
-	}
-}
 /* font definitions */
 
 html {
 	font-size: 12px;
-}
-@media screen and (min-width: 768px)  {
-		html {
-			font-size: 16px;
-		}
 }
 
 /* Sticky header style */
@@ -728,10 +567,4 @@ html {
 .stay-on-top {
 	position: fixed;
 	z-index: 99999999999999;
-}
-
-
-.agenda-desc{
-  overflow: hidden;
-    height: 5em;
 }
