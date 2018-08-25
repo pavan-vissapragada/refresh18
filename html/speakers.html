@@ -9,8 +9,9 @@
 	<link rel="stylesheet" href="css/utils.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/main.css">
-  	<link rel="stylesheet" href="css/speakers.css">
 	<link rel="stylesheet" href="css/media-queries.css">
+	<link rel="stylesheet" href="css/agenda.css">
+  	<link rel="stylesheet" href="css/speakers.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
@@ -18,7 +19,6 @@
 <script src="js/jpanel.js"></script>
 <script src="js/jmodal.js"></script>
 <link rel="stylesheet" href="css/jmodal.css">
-
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -42,6 +42,7 @@ $( document ).ready(function() {
 
 	});
 	jPM.on();
+
 	$('.clickMenu').click(function() {
 		$('.menu-trigger').click();
 	})
@@ -61,7 +62,6 @@ $( document ).ready(function() {
 
 </head>
 <body>
-
 <header class="main stay-on-top">
 	    <ul id="menu" style="display: none;">
 			<li class="clickMenu"><a href="../#about">About</a></li>
@@ -99,59 +99,14 @@ $( document ).ready(function() {
 		</div>
 	</dheader>
 
-<section class="intro">
-	<div class="text-center">
-		<a href="" class="freshworks-logo"></a>
-		<span class="presents">presents</span>
-		<div class="refresh-img"></div>
-		<h5>OCTOBER 11-12, 2018 <span>NEW YORK</span></h5>
-		<h3>Engage the future</h3>
-		<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
-	</div>
-</section>
-
-<section class="about" id="about">
-	<div class="wrap content-grid">
-		<h1>About the Event</h1>
-		<p>Freshworks brings to you - <b>Refresh 18!</b> Gear up for 2 days of unlimited learning, inspiring solutions, networking and fun. Packed with over 45 knowledge-sharing sessions, Freshworks’ first user conference is here to help you succeed in your role, get hands-on with the product, connect with inspiring minds and refresh yourself!</p>
-		<p>Engage in sessions about the latest trends and developments in helpdesk/customer support, customer experience management, IT service desk, collaboration and communication.
-		Redefine your career with our learning sessions, certification opportunities, hands-on demos and other solutions to help accelerate your growth.</p>
-	</div>
-</section>
-
-<section class="why-attend">
-	<div class="float-block clearfix">
-		<div class="grid-block">
-			<h2>Get the exclusive scoop first</h2>
+	<section class="agenda-bg">
+		<div class="text-center">
+			<h2>Speakers</h2>
 		</div>
-		<div class="grid-block">
-			<img src="images/grid-1.png" alt="">
-		</div>
-		<div class="grid-block">
-			<h2>Network & connect</h2>
-		</div>
-		<div class="grid-block">
-			<img src="images/grid-2.png" alt="">
-		</div>
-	</div>
-	<div class="float-block clearfix">
-		<div class="grid-block">
-			<img src="images/grid-3.png" alt="">
-		</div>
-		<div class="grid-block">
-			<h2>Meet with partners & explore solutions</h2>
-		</div>
-		<div class="grid-block">
-			<img src="images/grid-4.png" alt="">
-		</div>
-		<div class="grid-block">
-			<h2>Get certified & climb your way up</h2>
-		</div>
-	</div>
-</section>
+	</section>
 
 <section class="speaker" id="speakers">
-	<h1>Featured Speakers</h1>
+	<h1>Speakers</h1>
 
 	<div class="wrap content-grid">
 		<ul class="speakers-list float-block clearfix">
@@ -192,32 +147,50 @@ $( document ).ready(function() {
 					<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
 				</ul>
 			</li>
+			<li>
+				<div class="photo">
+					<img src="images/julie.png" alt="">
+				</div>
+				<h5>Julie mohr</h5>
+				<p>Author, Speaker & Consultant</p>
+				<a href="#ex4" rel="modal:open">View Bio</a>
+
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/stephen.png" alt="">
+				</div>
+				<h5>Stephen mann</h5>
+				<p>Principal Analyst<br>ITSM.tools</p>
+				<a href="#ex5" rel="modal:open">View Bio</a>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
+			<li>
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>David Thompson</h5>
+				<p>CMO <br>Freshworks</p>
+				<a href="#ex6" rel="modal:open">View Bio</a>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</li>
 		</ul>
 	</div>
-
-	<p class="text-center view-all-speakers"><a href="speakers.html" class="btn-primary transparent">View all Speakers</a></p>
 </section>
 
-<section class="convince text-center">
-	<h3>Need to convince your boss? &nbsp;<a href="images/convince-your-manager.docx" download>Here’s your letter</a></h3>
-</section>
-
-<section class="venue" id="venue">
-	<h1>Venue</h1>
-	<a href="https://www.google.com/maps/place/Grand+Hyatt+New+York/@40.752038,-73.976454,20z/data=!4m7!3m6!1s0x0:0x500317cc3cc9f519!5m1!1s2018-09-03!8m2!3d40.7520381!4d-73.9764538?hl=en-GB" target="_blank">
-		<div class="map-container">
-			<div class="row">
-				<div class="cell">
-					<div class="map-info text-center">
-						<h4>Grand Hyatt, New York</h4>
-						<p>109 E 42nd St, New York, NY 10017, USA</p>
-						<span class="btn-primary transparent">View Directions</button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</a>
-</section>
+<p class="text-center announce">...more speakers to be announced soon</p>
 
 <section class="ready text-center">
 	<div class="wrap content-grid">
@@ -320,6 +293,71 @@ $( document ).ready(function() {
 		</div>
 	</div>
 </div>
+<div id="ex4" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/julie.png" alt="">
+				</div>
+				<h5>Julie mohr</h5>
+				<p>Author, Speaker & Consultant</p>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Julie is a dynamic, engaging change agent who brings authenticity, integrity, and passion to practitioners worldwide. Through her books, articles, speaking, consulting, and teaching — her purpose is to spark change in the world with thought-provoking dialog and interaction. Julie has a B.S. degree in computer science from The Ohio State University, a MaED from the University of Phoenix, and is currently pursuing her Ph.D. in Management and Organizational Leadership in Information Systems & Technology from the University of Phoenix. She is an ITIL Expert, Certified Help Desk Director, and Certified Governance IT Professional.
+					<br>
+					Julie captivates audiences at conferences worldwide on topics of authentic leadership, business strategy, knowledge management, organizational culture, and innovation.</p>
 
+		</div>
+	</div>
+</div>
+<div id="ex5" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/stephen.png" alt="">
+				</div>
+				<h5>Stephen mann</h5>
+				<p>Principal Analyst and Content Director<br>ITSM.tools</p>
+				<!-- <a href="">View Bio</a> -->
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>Stephen is Principal Analyst and Content Director at the ITSM-focused industry analyst firm ITSM.tools. Also an independent IT and IT service management marketing content creator, and a frequent blogger, writer, and presenter on the challenges and opportunities for IT service management professionals.
+						If more is needed...
+						<br><br>
+						Stephen previously held positions in IT research and analysis (at IT industry analyst firms Ovum and Forrester and the UK Post Office), IT service management consultancy, enterprise IT service desk and IT service management, IT asset management, innovation and creativity facilitation, project management, finance consultancy, internal audit, and product marketing for a SaaS IT service management technology vendor.</p>
+
+		</div>
+	</div>
+</div>
+<div id="ex6" class="modal">
+	<h3 class="text-center speaker-bio">Speaker Bio</h3>
+	<div class="bio-wrapper">
+		<div class="info-wrapper julie">
+			<div class="photo">
+				<img src="images/speaker-3.png" alt="">
+			</div>
+			<h5>David Thompson</h5>
+			<p>CMO <br>Freshworks</p>
+			<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+			</ul>
+		</div>
+		<div class="speaker-right scrollable">
+				<p>David as an Industry thought-leader in digital marketing and emerging technology sectors including webconferencing, digital marketing, data science, collaboration, online marketplaces. He has a deep understanding of positioning, M&A, fundraising, board management, public company operations and strategy.</p>
+
+		</div>
+	</div>
+</div>
 </body>
 </html>
