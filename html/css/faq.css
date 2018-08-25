@@ -1,0 +1,126 @@
+
+
+
+section h1 {
+  font-size: 2.575rem;
+  text-align: center;
+  border-bottom: 1.5px solid #f84d74;
+  display: inline-block;
+  padding: 0;
+  width:90%;
+}
+section {
+  padding: 8px 0;
+}
+.ready h1 {
+  border: none;
+}
+.faq {
+  padding: 10px 0;
+}
+.set {
+  margin: 10px 0;
+}
+
+section h3 {
+  color: #4a4a4a;
+  font-size: 1.175rem;
+  font-weight: 600;
+}
+
+a {
+  font-size: 1.25rem;
+  color: #f84d74;
+  font-family: "Source Sans Pro";
+}
+b {
+  font-size: 1rem;
+}
+.agenda-bg {
+  height: 440px;
+  background: url(../images/agenda-bg.png);
+  background-size: cover;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agenda-bg h2 {
+    display: inline-block;
+    color: #fff;
+    font-size: 2.5rem;
+    border-radius: 62px;
+    background-color: rgba(51, 45, 62, 0.7);
+    border: solid 1px #979797;
+    padding: 9px 44px;
+    margin: 140px auto 0 auto;
+    margin-top: 0;
+
+  }
+
+  @media screen and (max-width: 767px) {
+    .footer-content-right {
+        padding-bottom: 0;
+        margin-left: -65px;
+    }
+    .accordion{
+      width: 90% !important;
+    }
+  }
+
+
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 97%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    /*background-color: #ccc;*/ 
+    background-color:#F5F5F5; 
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color:whitesmoke;
+    overflow: hidden;
+}
+.initopen{
+  display: block;
+
+}
+
+.accordion:after {
+    content: '+'; /* Unicode character for "plus" sign (+) */
+    font-size: 18px;
+    color:rgb(255, 143, 157)!important;
+    float: right;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.active:after {
+    color:rgb(255, 143, 157)!important;
+    content: "-"; /* Unicode character for "minus" sign (-) */
+}
+
+.iconbg{
+  color:rgb(255, 143, 157)!important;
+}
+section.location {
+  padding-bottom: 8%;
+}
+
+.general
+{padding-top: 4%;
+
+}    

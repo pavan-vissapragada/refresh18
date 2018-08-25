@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Refresh</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+  <link rel="icon" size="32x32" type="image/png" href="images/v2.png"/>
+	<link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/faq.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
+<script src="js/jquery_min.js"></script>
+<script src="js/jpanel.js"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124029490-1');
+	function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+$( document ).ready(function() {
+	var jPM = $.jPanelMenu({
+    menu: '#menu',
+    trigger: '.menu-trigger',
+    duration: 300,
+		excludedPanelContent: '.stay-on-top'
+
+	});
+	jPM.on();
+	$('.clickMenu').click(function() {
+		$(this).children("a").click();
+	})
+});
+</script>
+
+
+<!-- <script src='//cdn.zarget.com/61608/70421.js'></script>
+<link href="/assets/css/site-23c14408.css" rel="stylesheet"> -->
+<script type="text/javascript">
+  if (window.localStorage.getItem('fw_cookie_opt_out') !== 'yes') {
+    window.fw_trigger_ads = 'yes';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'trigger_ads' });
+  }
+</script>
+
+</head>
+<body>
+<a class="fixed-button-wrapper stay-on-top" href="https://register.refresh18.com/">Register Now</a>
+<header class="main stay-on-top">
+	    <ul id="menu" style="display: none;">
+	        <li class="clickMenu"><a href="../#why-attend">Why Attend</a></li>
+	        <li class="clickMenu"><a href="../#venue">Venue</a></li>
+	        <li class="clickMenu"><a href="agenda.html">Full Agenda</a></li>
+	        <li class="clickMenu"><a href="../#speakers">Speakers</a></li>
+					<li class="clickMenu"><a href="#">FAQ</a></li>
+	    </ul>
+	    <div id="trigger">
+				<a href="javascript:void(0);" class="icon menu-trigger">
+					<i class="fa fa-bars"></i>
+				</a>
+				<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+
+			</div>
+</header>
+<dheader class="stay-on-top">
+		<div class="wrap content-grid">
+			<div class="logo-wrapper">
+		    <a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a href="/" class="logo fleft"></a>
+			</div>
+			<nav class="fright right-nav" id="top-nav">
+				<ul class="float-block clearfix">
+					<li class="sub-nav">
+							<a href="javascript:void(0)">Attend</a>
+						<ul>
+							<li><a href="../#why-attend">Why Attend</a></li>
+							<li><a href="../#venue">Venue</a></li>
+						</ul>
+					</li>
+					<li class="sub-nav">
+						<a href="javascript:void(0)">Agenda</a>
+						<ul>
+							<li><a href="agenda.html">Full Agenda</a></li>
+							<li><a href="../#speakers">Speakers</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">FAQ</a>
+					</li>
+				</ul>
+				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
+			</nav>
+		</div>
+</dheader>
+<section class="agenda-bg">
+	<div class="text-center">
+		<h2>FAQ</h2>
+	</div>
+</section>
+
+
+
+<section class="general">
+  <div class="wrap content-grid">
+    <h1>General</h1>
+    <div class="faq">
+      <div class="set">
+        <h3>What is Refresh 18?</h3>
+        <p>Refresh 18 is Freshworks’ first global user conference. Two days of packed unlimited learning,
+          inspiration, networking, and fun. With over 45 integrated learning sessions to help you succeed in
+          your role by getting hands-on experience with the product, network with minds that inspire, and refresh yourself,
+           Refresh 18 is the place you want to be at, this October.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Will all my questions be answered at the event?</h3>
+        <p>Yes, all your questions will be answered in our sessions.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Will there be opportunities to have one-on-one sessions?</h3>
+        <p>Absolutely! We have product training sessions, apart from which you can book a
+          one-on-one deep learning session with our product experts.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Is there a hashtag I can follow for all Refresh 18 related updates?</h3>
+        <p>Yes, follow #refresh18 for all our social media updates.
+        </p>
+      </div>
+      <div class="set">
+        <h3>What time should I be there?</h3>
+        <p>All registrations along with breakfast begins by 7:00 AM. The event along starts by 8:30 AM. <a href="https://refresh18.com/agenda.html">Here’s the full agenda.</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="registration-logistics">
+  <div class="wrap content-grid">
+    <h1>Registrations and Logistics</h1>
+    <div class="faq">
+      <div class="set">
+        <h3>How do I register for the event?</h3>
+        <p><a href="https://register.refresh18.com/">Register here.</a> Early bird passes start from $399. Grab your early bird passes before September 14, 2018.
+        </p>
+      </div>
+      <div class="set">
+        <h3>When does the registration close?</h3>
+        <p>Tickets will be sold until we’re all out, which is why you should hold your place, now.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Where do I pick up my registration badge?</h3>
+        <p>We have a registration desk set up at Grand Hyatt, please be sure to pick up your badge from there
+        </p>
+      </div>
+      <div class="set">
+        <h3>Is there anything I need to bring to the conference?</h3>
+        <p>To make quick notes, you can bring your laptop or mobile device. We will have a lot of interactive and fun sessions, so gear up!
+        </p>
+      </div>
+      <div class="set">
+        <h3>Is there a dress code for the event?</h3>
+        <p>Anything on the lines of business casual, is suggested.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Will there be on-the-spot registrations?</h3>
+        <p>Yes, we do. We have a registration desk set up at the venue, where we can check you in.         </p>
+      </div>
+      <div class="set">
+        <h3>Incase I cannot attend the event, can I pass my ticket to a friend/colleague?</h3>
+        <p>Definitely. All you have to do is drop an email to <a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a> with your colleague/ friend’s information.        </p>
+      </div>
+      <div class="set">
+        <h3>Will there be Wi-Fi at the event?</h3>
+        <p>Yes.  Wi-Fi is available at the venue.        </p>
+      </div>
+      <div class="set">
+        <h3>Will there be food provided at the event?</h3>
+        <p>We will be providing breakfast and lunch. There will also be snacks, tea and coffee during the breaks.        </p>
+      </div>
+      <div class="set">
+        <h3>How does your cancellation policy work?</h3>
+        <p>A full refund is offered if your ticket is cancelled three weeks prior to the date of the event.
+          We offer a 50%  refund if your ticket is cancelled one week prior to the date of the event.
+          Incase you have paid for the event but cannot attend it, please reach out to us at <b>refreshconf@freshworks.com</b> and we’ll help you out.
+        </p>
+      </div>
+      <div class="set">
+        <h3>Will the sessions at the event be recorded?</h3>
+        <p>Yes, all the sessions will be recorded.        </p>
+      </div>
+      <div class="set">
+        <h3>Will the event be live-streamed?</h3>
+        <p>No, we are not planning to live-stream the event.        </p>
+      </div>
+      <div class="set">
+        <h3>Since I am traveling from another country, I might require an invitation letter for a visa. How do I go about this?</h3>
+        <p>Once you’ve registered for the event,  please share all the relevant details (Full name as in passport, D.O.B, passport number) with us at refreshconf@freshworks.com and we will provide you an invitation letter.        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="location">
+  <div class="wrap content-grid">
+    <h1>Locations</h1>
+    <div class="faq">
+      <div class="set">
+        <h3>Where is Refresh 18 happening?</h3>
+        <p>Refresh 18 is happening in New York on October 11th and 12th at the
+          Grand Hyatt - 109 E 42nd St, New York, NY 10017, USA</p>
+      </div>
+      <div class="set">
+        <h3>Where can I book rooms?</h3>
+        <p>We’ve arranged for discounted rooms at the Grand Hyatt New York. You can book yours <a href="https://book.passkey.com/go/GroundSwellattendee">here.</a></p>
+      </div>
+      <div class="set">
+        <h3>Whom do I contact if I have more questions?</h3>
+        <p>Contact <a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a> if you have any further queries. </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ready text-center">
+	<div class="wrap content-grid">
+		<h1>Are you ready to learn, connect, get inspired and have fun?</h1>
+		<p>Refresh 18 is the place for you. Register now and grab your seat. We’re selling out!</p>
+		<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
+	</div>
+</section>
+<div class="footer">
+	<div class="l-page content-grid">
+		<div class="footer-content">
+			<div class="footer-content-left">
+				<p class="footer-para">CONNECT WITH US:</p>
+				<div class="footer-social">
+					<a class="sprite-fb-white" target="_blank" href="https://www.facebook.com/FreshworksInc/"></a>
+					<a class="sprite-tw-white" target="_blank" href="https://twitter.com/freshworksinc?lang=en"></a>
+					<a class="sprite-ln-white" target="_blank" href="https://in.linkedin.com/company/freshworks-inc"></a>
+				</div>
+				<p class="copyright">
+					<a href="https://www.freshworks.com/privacy/"><span class="privacy-link">Privacy Policy</span></a>© 2018 Freshworks Inc. </p>
+			</div>
+			<div class="footer-content-center"> </div>
+			<div class="footer-content-right">
+				<p>GET IN TOUCH WITH US:</p>
+				<a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a>
+				<br>#Refresh18
+			</div>
+		</div>
+		<div class="footer-right"></div>
+	</div>
+</div>
+
+</body>
+</html>
