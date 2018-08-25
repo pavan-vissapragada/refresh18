@@ -1,21 +1,4 @@
-.agenda-bg {
-    height: 440px;
-    background: url(../images/agenda-bg.png);
-    background-size: cover;
-    padding: 0;
-  }
-  
-  .agenda-bg h2 {
-    display: inline-block;
-    color: #fff;
-    font-size: 2.5rem;
-    border-radius: 62px;
-    background-color: rgba(51, 45, 62, 0.7);;
-    border: solid 1px #979797;
-    padding: 9px 44px;
-    margin: 140px auto 0 auto;
-  }
-  
+
   .select-track {
     background-color: #f0f0f0;
     padding: 40px 0;
@@ -46,10 +29,27 @@
     font-size: 1rem;
     text-align: center;
     border-radius: 4px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);*/
     background-color: #fff;
     padding: 6px 28px;
     box-sizing: border-box;
+  }
+
+  ul.tabs li:first-child a:not(.active):hover{
+    color: #25C16F;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  ul.tabs li:nth-child(2) a:not(.active):hover{
+    color: #08C7FB;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  ul.tabs li:nth-child(3) a:not(.active):hover{
+    color: #FFA800;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+  ul.tabs li:last-child a:not(.active):hover{
+    color: #3973E6;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
   }
   
   ul.tabs li a.active {
@@ -120,7 +120,13 @@
   .track-list p {
     font-size: 1.125rem;
     font-weight: 300;
+    max-height: 66px;
+    overflow: hidden;
     margin: 0;
+  }
+  .track-list p.view-full{
+    max-height: 100%;
+    overflow: visible;
   }
   
   .track-list .label {

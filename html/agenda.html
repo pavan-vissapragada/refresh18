@@ -53,8 +53,8 @@
 
 $(".tabmenus .active").trigger('click')
 
-$(".readmore").on('click',function(){
-	$(this).siblings('p').css('height','auto');
+$(document).on('click',".readmore",function(){
+	$(this).siblings('p').addClass('view-full');
 	$(this).hide()
 	})
 
@@ -79,7 +79,7 @@ $(".readmore").on('click',function(){
 <body>
 	<header class="main stay-on-top">
 	    <ul id="menu" style="display: none;">
-			<li class="clickMenu"><a href="#about">About</a></li>
+			<li class="clickMenu"><a href="../#about">About</a></li>
 			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
 			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
 			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
@@ -103,7 +103,7 @@ $(".readmore").on('click',function(){
 			</div>
 			<nav class="fright right-nav" id="top-nav">
 				<ul class="float-block clearfix">
-					<li><a href="#about">About</a></li>
+					<li><a href="../#about">About</a></li>
 					<li><a href="agenda.html">Agenda</a></li>
 					<li><a href="speakers.html">Speakers</a></li>
 					<!-- <li><a href="venue.html">Venue</a></li> -->
@@ -2019,7 +2019,7 @@ $(".readmore").on('click',function(){
 
 $(".cell p").each(function(i,k){
 	if($(k).text().length>400){
-$(k).parent().append("<a class='readmore'>readmore</a>")
+$(k).parent().find('.readmore').remove().end().append("<a class='readmore'>readmore</a>")
 $(k).addClass('agenda-desc')
 	}
 console.log('k',k)
