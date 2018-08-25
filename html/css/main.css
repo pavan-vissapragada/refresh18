@@ -164,7 +164,7 @@ dheader nav ul li ul:hover {
 .intro {
   color: #fff;
   height: 520px;
-  background: url(../images/bg-img.png);
+  background: url(../images/bg-img.jpg);
   background-size: cover;
   padding-top: 60px;
   padding-bottom: 0;
@@ -450,6 +450,21 @@ dheader .dropdown-nav {
   width: 100%;
   left: 0;
   top: 0;
+}
+.agenda-bg {
+  height: 380px;
+  background: url(../images/bg-img.jpg) center center;
+  background-size: cover;
+  padding: 0;
+}
+
+.agenda-bg h2 {
+  display: inline-block;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 62px;
+  margin: 180px auto 0 auto;
+  padding: 9px 44px;
 }
 
 .agenda-note {
