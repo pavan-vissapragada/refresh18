@@ -22,7 +22,7 @@
   align-items: center;
 }
 .speakers-list>li {
-  height: 400px;
+  height: 420px;
   box-shadow: none;
   border: 1px solid #EBEBEB;
   margin-bottom: 2.5rem;
@@ -114,17 +114,16 @@ body .modal .close-modal:hover {
   color: #666;
   line-height: 2rem;
   margin-bottom: 30px;
-  
+
 }
 
 @media screen and (max-width: 767px) {
   body .modal {
-    display: inline-block;
     max-height: 90vh;
     overflow-y: scroll;
     position: static;
   }
-  body.modal-open { overflow: hidden; }
+  /* body.modal-open { overflow: hidden; } */
   .speaker-right p {
     font-size: 1.25rem;
     line-height: 2.5rem;
