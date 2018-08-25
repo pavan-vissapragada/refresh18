@@ -269,7 +269,9 @@ dheader nav ul li ul:hover {
 
 .convince h3 {
   color: #fff;
-  font-size: 1.45rem;
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 20px 0;
 }
 
 .convince a {
