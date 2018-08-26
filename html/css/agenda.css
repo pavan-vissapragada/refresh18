@@ -1,3 +1,21 @@
+.agenda-mobile ul.tabs li{
+    padding: 1%;
+ 
+     /*margin:0px;*/
+      
+   }
+ .agenda-mobile .select-track h3{
+   padding-left:5%; 
+ }
+ 
+ .agenda-mobile ul{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+    
+ }
+ 
+
 
   .select-track {
     background-color: #f0f0f0;
@@ -286,7 +304,7 @@ img
         background: #bbbbbb;
         left: 50%;  
         top: 20px;
-        bottom: 20px;
+        bottom: 90px;
         margin-left: -4px;
     }
 

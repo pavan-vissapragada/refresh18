@@ -33,8 +33,42 @@
 		gtag('config', 'UA-124029490-1');
 
 		$(document).ready(function () {
+			var formjson = []
+
+			$(".tab-content.active .track-list").each(function (index, element) {
+				$(element).find('.row').each(function (j, w) {
+					var mydom = $(this).find('.cell')
+
+					//title:$(mydom)[1].find('h6')}
+					var timestrings = $(mydom)[0]
+					var agendanotes = $(mydom)[1]
+					var agendatitle = $(agendanotes).find('h6')
+					var speakersname = $(agendanotes).find('.speaker-label')
+					var agendadesc = $(agendanotes).find('.agenda-desc')
+					var panellabel = $(agendanotes).find('.label')
+
+
+					//	console.log($(timestrings).text())
+
+					formjson.push({
+						time: $(timestrings).text() || '',
+						agendanotes: $(agendanotes).text() || '',
+						agendatitle: $(agendatitle).text() || '',
+						speakersname: $(speakersname).text() || '',
+						agendadesc: $(agendadesc).text() || '',
+						panellabel: $(panellabel).text() || ''
+					})
+					//	console.log($(mydom)[0])
+
+				})
+
+
+			})
+			//	console.log('formjson',formjson)
+
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				$(".track-details").addClass('hider')
+				$('body').addClass('agenda-mobile')
 			} else {
 				$(".timelinecontainer").addClass('hider')
 			}
@@ -47,16 +81,16 @@
 
 			});
 			jPM.on();
-			$('.clickMenu').click(function() {
+			$('.clickMenu').click(function () {
 				$('.menu-trigger').click();
 			})
 
-$(".tabmenus .active").trigger('click')
+			$(".tabmenus .active").trigger('click')
 
-$(document).on('click',".readmore",function(){
-	$(this).siblings('p').addClass('view-full');
-	$(this).hide()
-	})
+			$(document).on('click', ".readmore", function () {
+				$(this).siblings('p').addClass('view-full');
+				$(this).hide()
+			})
 
 
 		});
@@ -76,27 +110,27 @@ $(document).on('click',".readmore",function(){
 
 </head>
 
-<body>
+<body class='agenda-body'>
 	<header class="main stay-on-top">
-	    <ul id="menu" style="display: none;">
+		<ul id="menu" style="display: none;">
 			<li class="clickMenu"><a href="../#about">About</a></li>
 			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
 			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
 			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
 			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
 		</ul>
-	    <div id="trigger">
-				<a href="javascript:void(0);" class="icon menu-trigger">
-					<i class="fa fa-bars"></i>
-				</a>
-				<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+		<div id="trigger">
+			<a href="javascript:void(0);" class="icon menu-trigger">
+				<i class="fa fa-bars"></i>
+			</a>
+			<div class="logo-wrapper"><a href="/" class="logo"></a></div>
 
-			</div>
-</header>
-<dheader class="stay-on-top">
+		</div>
+	</header>
+	<dheader class="stay-on-top">
 		<div class="wrap content-grid">
 			<div class="logo-wrapper">
-		    <a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+				<a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
 					<i class="fa fa-bars"></i>
 				</a>
 				<a href="/" class="logo fleft"></a>
@@ -565,11 +599,15 @@ $(document).on('click',".readmore",function(){
 						<div class="cell">
 							<h6>The 7 Habits Of Highly Effective People & Leaders – Through A Lean Lens</h6>
 							<p class="speaker-label"> Speaker: Troy, VP, Research & Development at Pink Elephant</p>
-							<p>Simply put, Lean and Agile both share a core philosophy of continuous improvement focused on enhancing the customer value of your products and services. For Lean and Agile principles to be executed successfully, leaders must change culture and often their own management behaviors, in support of the continuous improvement culture needed.
-
-That’s where Steven Covey’s The 7 Habits of Highly Effective People comes in. This best-selling book is an all-time leadership classic that has sold millions of copies. Covey’s model for personal and team effectiveness has changed the lives of countless professionals for the better and has had a lasting business impact that is undeniable.
-
-In this informative and inspirational session, Troy will look at these time-tested habits through a Lean leadership lens to explicitly highlight how each of the 7 Habits (Be Proactive, Begin With The End In Mind, First Things First, Create A Win/Win, Seek First To Understand, Synergize, Sharpen The Saw) relate to and support Lean principles.</p>
+							<p>Simply put, Lean and Agile both share a core philosophy of continuous improvement focused on enhancing the customer
+								value of your products and services. For Lean and Agile principles to be executed successfully, leaders must change
+								culture and often their own management behaviors, in support of the continuous improvement culture needed. That’s
+								where Steven Covey’s The 7 Habits of Highly Effective People comes in. This best-selling book is an all-time leadership
+								classic that has sold millions of copies. Covey’s model for personal and team effectiveness has changed the lives
+								of countless professionals for the better and has had a lasting business impact that is undeniable. In this informative
+								and inspirational session, Troy will look at these time-tested habits through a Lean leadership lens to explicitly
+								highlight how each of the 7 Habits (Be Proactive, Begin With The End In Mind, First Things First, Create A Win/Win,
+								Seek First To Understand, Synergize, Sharpen The Saw) relate to and support Lean principles.</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -582,9 +620,14 @@ In this informative and inspirational session, Troy will look at these time-test
 							<span class="label red">Product</span>
 							<h6>Make Self Service Great Again!</h6>
 							<p class="speaker-label">Speaker: Sanjeev NC, Product Evangelist, Freshworks</p>
-							<p>It is no secret that organisations struggle with self service adoption. No matter how effective the self service portal is, IT teams cannot stop the end users from walking up or sending them an email. This makes it incredibly hard to deflect tickets. In this session, Sanjeev will talk about general best practices and actionable tips for you to improve your self service adoption with Freshservice. Top session takeaways: </br> 1) Actionable tips to design a self service portal </br>2) how to evolve beyond self service portals </br>3) How to customise the self service portal
-							<span class="circle"></span>
-							<span class="line dotted"></span>
+							<p>It is no secret that organisations struggle with self service adoption. No matter how effective the self service
+								portal is, IT teams cannot stop the end users from walking up or sending them an email. This makes it incredibly
+								hard to deflect tickets. In this session, Sanjeev will talk about general best practices and actionable tips for
+								you to improve your self service adoption with Freshservice. Top session takeaways: </br> 1) Actionable tips to design
+								a self service portal </br>2) how to evolve beyond self service portals </br>3) How to customise the self service
+								portal
+								<span class="circle"></span>
+								<span class="line dotted"></span>
 						</div>
 					</li>
 					<li class="row">
@@ -683,7 +726,12 @@ In this informative and inspirational session, Troy will look at these time-test
 						<div class="cell">
 							<h6>ITSM Futures: The Inevitable Convergence of Internal and External Support</h6>
 							<p class="speaker-label"> Speaker: Stephen Mann, Principal Analyst and Content Director, ITSM.tools</p>
-							<p>There’s much to think about with the future direction of IT service management (ITSM) – from digital transformation, through the management of new technologies, to dealing with people-related challenges and opportunities. And, in dealing with each of these discrete areas, it’s easy to miss some of the bigger picture trends and opportunities. In this presentation, Stephen will talk to many of the challenges and opportunities faced by IT support teams and how the realization that the bidirectional sharing, of support good practices and the enabling technologies, between internal and external support will significantly improve the operations and outcomes of both parties.</p>
+							<p>There’s much to think about with the future direction of IT service management (ITSM) – from digital transformation,
+								through the management of new technologies, to dealing with people-related challenges and opportunities. And, in
+								dealing with each of these discrete areas, it’s easy to miss some of the bigger picture trends and opportunities.
+								In this presentation, Stephen will talk to many of the challenges and opportunities faced by IT support teams and
+								how the realization that the bidirectional sharing, of support good practices and the enabling technologies, between
+								internal and external support will significantly improve the operations and outcomes of both parties.</p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -727,10 +775,15 @@ In this informative and inspirational session, Troy will look at these time-test
 							<time>11:00 AM - 11:45 AM</time>
 						</div>
 						<div class="cell">
-							<h6>Living in the Disruption Economy: Why Our Customers are Screaming for
-Change and We’re Still Not Listening</h6>
+							<h6>Living in the Disruption Economy: Why Our Customers are Screaming for Change and We’re Still Not Listening</h6>
 							<p class="speaker-label"> Speaker: Julie Mohr, Author, Speaker & Consultant </p>
-							<p>As we progress as a society from the knowledge economy through the disruption economy, our customers are becoming more vocal about what they want and need from their service providers. No longer are customers willing to put up with bureaucratic and lethargic global enterprises who are slow to change and create unnecessary friction for the consumer. Customers are voting with their currency, choosing Uber over taxis, Amazon over the department store, Airbnb over hotels, and Netflix over the network TV station. If we are not careful in IT, we will also become extinct. We need to develop strategies that innovate, reduce friction and stop waiting for our customers to come to us. And knowledge is the key to our success.</p>
+							<p>As we progress as a society from the knowledge economy through the disruption economy, our customers are becoming
+								more vocal about what they want and need from their service providers. No longer are customers willing to put up
+								with bureaucratic and lethargic global enterprises who are slow to change and create unnecessary friction for the
+								consumer. Customers are voting with their currency, choosing Uber over taxis, Amazon over the department store, Airbnb
+								over hotels, and Netflix over the network TV station. If we are not careful in IT, we will also become extinct. We
+								need to develop strategies that innovate, reduce friction and stop waiting for our customers to come to us. And knowledge
+								is the key to our success.</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -764,7 +817,11 @@ Change and We’re Still Not Listening</h6>
 							<span class="label red">Product</span>
 							<h6>ITSM KPIs - Are you Measuring What Matters?</h6>
 							<p class="speaker-label">Speaker: Deepika Selvaraj, Product Manager - Freshservice @ Freshworks</p>
-							<p>As ITSM software evolve, IT leaders can track and measure almost any metric they want. It is easy to get lost in the world of metrics and forget to measure what actually metters. In this session, Deepika will talk about importance of measuring the right metric to drive the right behavior and how to measure those metrics within Freshservice's powerful reporting suite. Top takeaways: </br> 1) How to define which metrics to measure </br> 2) Top metrics that drive the right behavior</br> 3) Operational knowledge of Freshservice Reporting </p>
+							<p>As ITSM software evolve, IT leaders can track and measure almost any metric they want. It is easy to get lost in
+								the world of metrics and forget to measure what actually metters. In this session, Deepika will talk about importance
+								of measuring the right metric to drive the right behavior and how to measure those metrics within Freshservice's
+								powerful reporting suite. Top takeaways: </br> 1) How to define which metrics to measure </br> 2) Top metrics that
+								drive the right behavior</br> 3) Operational knowledge of Freshservice Reporting </p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -799,7 +856,11 @@ Change and We’re Still Not Listening</h6>
 							<span class="label red">Product</span>
 							<h6>Apps - Give your Service Desk Wings</h6>
 							<p> Praveen Raj, Product Consultant Presales – Freshservice @ Freshworks</p>
-							<p>In today's world of APIs and SDKs, ITSM tools cannot function in a silo. Freshservice marketplace capabilities enables you to build apps on top of Freshservice and connect to other applications. In this session, Praveen will explain the marketplace caplabilities and demonstrate how to build a simple custom app. Top takeaways:</br> 1) Good understanding of Freshservice SDK capabilities </br> 2) Common usecases and examples of custom apps </br> 3) Knowhow of building a simple custom app</p>
+							<p>In today's world of APIs and SDKs, ITSM tools cannot function in a silo. Freshservice marketplace capabilities
+								enables you to build apps on top of Freshservice and connect to other applications. In this session, Praveen will
+								explain the marketplace caplabilities and demonstrate how to build a simple custom app. Top takeaways:</br> 1) Good
+								understanding of Freshservice SDK capabilities </br> 2) Common usecases and examples of custom apps </br> 3) Knowhow
+								of building a simple custom app</p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -1071,8 +1132,8 @@ Change and We’re Still Not Listening</h6>
 						<div class="cell">
 							<span class="label red">Product</span>
 							<h6>Q&A Session with Sales admins</h6>
-							<p>Speakers: Srivatsan, Director - Product Management – Freshsales @ Freshworks </br> Swati Sharma, Product Manager – Freshsales,
-								Freshworks </br> Prem, Solution Architect - Freshsales @ Freshworks</p>
+							<p>Speakers: Srivatsan, Director - Product Management – Freshsales @ Freshworks </br> Swati Sharma, Product Manager
+								– Freshsales, Freshworks </br> Prem, Solution Architect - Freshsales @ Freshworks</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -1432,7 +1493,7 @@ Change and We’re Still Not Listening</h6>
 					<article class="timeline-entry vbold">
 
 						<div class="timeline-entry-inner">
-							<time class="timeline-time" datetime="2014-01-10T03:45"><span class='extrabold'>Day 1</span> </time>
+							<time class="timeline-time" datetime="2014-01-10T03:45"><span class='extrabold'>Day 1 testing</span> </time>
 
 							<div class="timeline-icon bg-info">
 								<i class="entypo-feather"></i>
@@ -1683,6 +1744,17 @@ Change and We’re Still Not Listening</h6>
 
 							</div>
 						</div>
+					</article>
+					<article class="timeline-entry begin">
+
+						<div class="timeline-entry-inner">
+
+							<div class="timeline-icon" style="-webkit-transform: rotate(-90deg); -moz-transform: rotate(-90deg);">
+								<i class="entypo-flight"></i>
+							</div>
+
+						</div>
+
 					</article>
 				</div>
 
@@ -1969,14 +2041,14 @@ Change and We’re Still Not Listening</h6>
 
 	<script>
 		function selectTab(tabId, elm) {
-		 
-	var menuitems = {
-				'Freshdesk': {'menucolor':'25C16F','fillbg': '#E9F8F0'},
-				'Freshservice': {'menucolor':'08C7FB','fillbg': '#E5F9FE'},
-				'Freshsales': {'menucolor':'FFA800','fillbg': '#FFF6E4'},
-				'Marketplace': {'menucolor':'3973E6','fillbg': '#EBF1FC'}
+
+			var menuitems = {
+				'Freshdesk': { 'menucolor': '25C16F', 'fillbg': '#E9F8F0' },
+				'Freshservice': { 'menucolor': '08C7FB', 'fillbg': '#E5F9FE' },
+				'Freshsales': { 'menucolor': 'FFA800', 'fillbg': '#FFF6E4' },
+				'Marketplace': { 'menucolor': '3973E6', 'fillbg': '#EBF1FC' }
 			}
-			 
+
 			var tab_links = document.getElementsByClassName('tab-link'),
 				tab_contents = document.getElementsByClassName('tab-content');
 
@@ -1991,22 +2063,22 @@ Change and We’re Still Not Listening</h6>
 			var applycolor = menuitems[$(elm).text()];
 			//alert(applycolor)
 
-			$(elm).css('background-color', "#" +applycolor.menucolor)
+			$(elm).css('background-color', "#" + applycolor.menucolor)
 
-			$(".circle").css({'background-color':applycolor.fillbg,'border':'1px solid'})
-			$(".circle").css({'background-color':applycolor.fillbg,'border-color':"#"+applycolor.menucolor})
+			$(".circle").css({ 'background-color': applycolor.fillbg, 'border': '1px solid' })
+			$(".circle").css({ 'background-color': applycolor.fillbg, 'border-color': "#" + applycolor.menucolor })
 			//$(".circle").css('border', 'solid 1px '+applycolor.menucolor);
 			//$(".circle.fill").css({'background-color': "#" +applycolor.menucolor,'background-color':applycolor.fillbg})
-			
 
-$(".cell p").each(function(i,k){
-	if($(k).text().length>400){
-$(k).parent().find('.readmore').remove().end().append("<a class='readmore'>Read more...</a>")
-$(k).addClass('agenda-desc')
-	}
-console.log('k',k)
 
-})
+			$(".cell p").each(function (i, k) {
+				if ($(k).text().length > 400) {
+					$(k).parent().find('.readmore').remove().end().append("<a class='readmore'>Read more...</a>")
+					$(k).addClass('agenda-desc')
+				}
+				//console.log('k',k)
+
+			})
 
 
 
