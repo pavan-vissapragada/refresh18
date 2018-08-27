@@ -32,8 +32,10 @@
 
 		gtag('config', 'UA-124029490-1');
 
-		$(document).ready(function () {
-			var formjson = []
+
+		function createmobileversion() {
+			var formjsonday1 = []
+			var formjsonday2 = []
 
 			$(".tab-content.active .track-list").each(function (index, element) {
 				$(element).find('.row').each(function (j, w) {
@@ -47,24 +49,32 @@
 					var agendadesc = $(agendanotes).find('.agenda-desc')
 					var panellabel = $(agendanotes).find('.label')
 
-
-					//	console.log($(timestrings).text())
-
-					formjson.push({
+					var rowvalues = {
 						time: $(timestrings).text() || '',
 						agendanotes: $(agendanotes).text() || '',
 						agendatitle: $(agendatitle).text() || '',
 						speakersname: $(speakersname).text() || '',
 						agendadesc: $(agendadesc).text() || '',
 						panellabel: $(panellabel).text() || ''
-					})
-					//	console.log($(mydom)[0])
+					}
+
+					//	console.log($(timestrings).text())
+					if (index == 0) {
+						formjsonday1.push(rowvalues)
+					} else {
+						formjsonday2.push(rowvalues)
+					}
 
 				})
 
 
 			})
-			//	console.log('formjson',formjson)
+			console.log('day1 ---', formjsonday1)
+			console.log('day2----', formjsonday2)
+
+		}
+		$(document).ready(function () {
+			
 
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 				$(".track-details").addClass('hider')
@@ -1417,6 +1427,11 @@
 							<span class="circle fill"></span>
 						</div>
 					</li>
+					
+				
+					
+				</ul>
+				<ul class="track-list">
 					<li class="row">
 						<div class="cell">
 							<h4>Day 2</h4>
@@ -2042,6 +2057,8 @@
 	<script>
 		function selectTab(tabId, elm) {
 
+
+			createmobileversion()
 			var menuitems = {
 				'Freshdesk': { 'menucolor': '25C16F', 'fillbg': '#E9F8F0' },
 				'Freshservice': { 'menucolor': '08C7FB', 'fillbg': '#E5F9FE' },
