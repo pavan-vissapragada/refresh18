@@ -71,6 +71,7 @@ b {
     display: none;
     background-color:whitesmoke;
     overflow: hidden;
+    width: 97%;
 }
 .initopen{
   display: block;
