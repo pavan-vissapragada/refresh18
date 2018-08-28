@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+ 
+  margin: 0;
+}
+
+section{
+  padding: 30px 0;
+}
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+.flex-row
+{  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.venuepart1{
+    text-align: center;
+    
+   
+}
+
+.venuepart1 h2,.venuepart1 h4{
+  flex: 100%;
+  color: #4A4A4A;	
+  font-family: "Source Sans Pro";
+  margin: 0;
+  color: #4a4a4a;
+  text-align: center;
+}
+
+.venuepart1 h4{
+
+  font-size: 2.575rem;
+  font-weight: 300;
+
+  
+}
+.venuepart1 h2{
+  font-size: 2.575rem;
+  font-weight: 600;
+ 
+}
+
+
+
+.venuepart1 p{
+  padding: 0% 11%;
+  color: #666666;
+  font-family: "Source Sans Pro";
+  
+}
+  
+.directionbtn {	
+  height: 40px;
+  	width: 190px;	
+  border: 1px solid #FC5B6C;	
+  border-radius: 3px;
+  color: #FC5B6C; 
+
+  line-height: 34px !important;
+  
+  margin: 0 auto;
+ font-family: Poppins;
+   font-size: 18px;	font-weight: 600;	
+   line-height: 27px;	text-align: center;
+
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+      flex-direction: column;
+  }
+}
+
+
+.venuepart2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.venuepart2 .leftarea{
+ 
+  text-align: center;
+  flex: 30%;
+} 
+.venuepart2 .rightarea{
+  flex: 30%;
+ 
+} 
+.venuepart2 h2{
+  margin: 0 auto;
+  text-align: left;
+   padding: 1rem;
+
+
+  color: #333333;	
+  font-family: Poppins;	
+  font-size: 36px;
+    font-weight: 600;	
+    line-height: 55px;	
+}
+.venuepart2 h4{
+  color: #4D4D4D;	font-family: "Source Sans Pro";	font-size: 30px;	font-weight: bold;	line-height: 34px;
+}
+h1,h2,h3,h4,h4{
+  margin: 12px 5px;
+  word-break: break-word;
+}
+
+
+ 
+.justflex{
+  display: flex;
+  flex-wrap: wrap;
+    margin: 2rem;
+}
+.inner{
+  width: 50%;
+  height: 110px;
+
+}   
+.inner div{
+  color: #666666;	font-family: "Source Sans Pro";	font-size: 18px;	line-height: 26px;
+}
+
+.venuepart3{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+.venuepart3 h2,.venuepart3 h4{
+margin: 0;
+text-align: center;
+flex: 100%;
+
+}
+.venuepart3 h2{
+  color: #333333;
+    font-family: Poppins;	
+    font-size: 36px;
+    font-weight: 600;
+    margin:0 auto;
+}
+.venuepart3 h4{
+  font-size: 24px;	
+  color: #333333;	
+  font-family: Poppins;	 
+  margin:0 auto;
+  padding-bottom: 38px;
+}
+.grild4{
+flex: 50%;
+padding: 26px 90px;
+
+text-align: left;
+}
+.grild4 h2{
+
+  font-family: Poppins;	font-size: 24px;	font-weight: 500;	color: #4D4D4D;text-align: left;
+}
+
+.grild4 p{
+ color: #666666;	font-family: "Source Sans Pro";	font-size: 16px;
+}
+
+.venuepart4{
+display: flex;
+flex-wrap: wrap;
+}
+.venuepart4 h2,.venuepart4 h4{
+  text-align: center;
+  flex: 100%; 
+}
+.venuepart4 h2
+{
+  color: #333333;	font-family: Poppins;	font-size: 38px;	font-weight: 600;
+}
+.venuepart4 h4
+{
+  color: #4D4D4D;	font-family: "Source Sans Pro";	font-size: 24px;
+}
+.venuepart4 .leftarea{
+  text-align: center;
+}
+.venuepart4 .leftarea,.venuepart4 .rightarea{
+  flex:50%;
+
+}
+.venuepart4 .rightarea{
+  
+}
+.venuepart4 < div{
+
+}
+.venuepart4 .rightarea img{
+  height: 36px;	
+  width: 36px;
+}
+.venuepart4 .rightarea p{
+   color: #666666;	font-family: "Source Sans Pro";	font-size: 18px;	line-height: 26px;
+   padding: 0;
+   margin: 0;
+}
+.venuelocations{
+  float: left;
+  width: 48%;
+  padding: 20px 10px;
+  
+}
+
+
+
+

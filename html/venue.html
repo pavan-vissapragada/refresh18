@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Refresh</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
+	<link rel="icon" size="32x32" type="image/png" href="images/v2.png" />
+	<link rel="stylesheet" href="css/utils.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/venue.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/media-queries.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
+	<script src="js/jquery_min.js"></script>
+	<script src="js/jpanel.js"></script>
+
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-124029490-1');
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		$(document).ready(function () {
+
+			//alert('hi')
+			//$() 
+			var jPM = $.jPanelMenu({
+				menu: '#menu',
+				trigger: '.menu-trigger',
+				duration: 300,
+				excludedPanelContent: '.stay-on-top'
+
+			});
+			jPM.on();
+			$('.clickMenu').click(function () {
+				$('.menu-trigger').click();
+			})
+
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+				acc[i].addEventListener("click", function () {
+					this.classList.toggle("active");
+					// alert('clcik')
+					var panel = this.nextElementSibling;
+					if (panel.style.display === "block") {
+						panel.style.display = "none";
+					} else {
+						panel.style.display = "block";
+					}
+				});
+			}
+
+			$(".initopen").trigger('click')
+			$(".initopen").addClass('active')
+			$('.accordion:after').addClass('iconbg')
+			$('.accordion:after').css("color", "yellow");
+		});
+	</script>
+
+
+	<!-- <script src='//cdn.zarget.com/61608/70421.js'></script>
+<link href="/assets/css/site-23c14408.css" rel="stylesheet"> -->
+	<script type="text/javascript">
+		if (window.localStorage.getItem('fw_cookie_opt_out') !== 'yes') {
+			window.fw_trigger_ads = 'yes';
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({ event: 'trigger_ads' });
+		}
+	</script>
+
+	<script>
+
+	</script>
+
+</head>
+
+<body>
+	<header class="main stay-on-top">
+		<ul id="menu" style="display: none;">
+			<li class="clickMenu"><a href="../#about">About</a></li>
+			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
+			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
+			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
+			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
+		</ul>
+		<div id="trigger">
+			<a href="javascript:void(0);" class="icon menu-trigger">
+				<i class="fa fa-bars"></i>
+			</a>
+			<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+
+		</div>
+	</header>
+	<dheader class="stay-on-top">
+		<div class="wrap content-grid">
+			<div class="logo-wrapper">
+				<a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+					<i class="fa fa-bars"></i>
+				</a>
+				<a href="/" class="logo fleft"></a>
+			</div>
+			<nav class="fright right-nav" id="top-nav">
+				<ul class="float-block clearfix">
+					<li><a href="../#about">About</a></li>
+					<li><a href="agenda.html">Agenda</a></li>
+					<li><a href="speakers.html">Speakers</a></li>
+					<!-- <li><a href="venue.html">Venue</a></li> -->
+					<li><a href="faq.html">FAQ</a></li>
+				</ul>
+				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
+			</nav>
+		</div>
+	</dheader>
+	<section class="agenda-bg">
+		<div class="text-center">
+			<h2>Venue</h2>
+		</div>
+	</section>
+
+	<section class="flex-row venuepart1">
+
+		<h2>Grand Hyatt, New York</h2>
+		<h4>109 E 42nd St, New York, NY 10017, USA</h4>
+		<p>Welcome to the grandest stage in the biggest metropolis of the country! Immerse yourself in the joys of midtown New
+			York and network with the brightest minds in the industry.
+		</p>
+		<div class='directionbtn'>Get Directions</div>
+	</section>
+
+	<section class="venuepart2">
+
+		<section class="leftarea">
+			<img src="images/grid-4.png" alt="">
+		</section>
+		<section class="rightarea">
+			<h2>Getting to Grand hyatt</h2>
+
+			<div class="justflex">
+				<div class="inner">
+					<div>Grand Central Terminal </div>
+					<h4>230 feet </h4>
+				</div>
+				<div class="inner">
+					<div>LaGuardia Airport
+					</div>
+					<h4>9 miles </h4>
+				</div>
+				<div class="inner">
+					<div>John F. Kennedy (JFK) International Airport </div>
+					<h4>15 miles </h4>
+				</div>
+				<div class="inner">
+					<div>Newark Liberty International Airport</div>
+					<h4>17 miles </h4>
+				</div>
+			</div>
+
+
+		</section>
+	</section>
+
+
+	<section class="venuepart3">
+
+		<h2>How to get around NYC</h2>
+		<h4>Discover what it is to be a New Yorker; self-driving isn’t prefferred here!</h4>
+
+		<div class="grild4">
+			<h2>Yellow Cab</h2>
+			<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
+				Hyatt.
+			</p>
+		</div>
+		<div class="grild4">
+			<h2> Ride the Train</h2>
+			<p>TFancy experiencing one of the oldest metros in the world? The Grand Central Terminal (GCT) is right across the street.</p>
+		</div>
+		<div class="grild4">
+			<h2>Teleport with Airporter </h2>
+			<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
+				Hyatt.
+			</p>
+		</div>
+		<div class="grild4">
+			<h2>Uber & Lyft</h2>
+			<p>Unsure about the crowd? You can always hail a ride through Uber or Lyft. Just make sure you find your way to Refresh
+				18!
+			</p>
+		</div>
+
+
+
+	</section>
+	<section class="venuepart4">
+		<h2>Explore NYC!</h2>
+		<h4>Your guide to exploring the big apple
+		</h4>
+
+		<section class="leftarea">
+			<img src="images/grid-4.png" alt="">
+		</section>
+		<section class="rightarea">
+			<div class="venuelocations">
+				<div>
+					<img src="images/Liberty@2x.png" alt="" />
+				</div>
+				<p>Statue of liberty</p>
+			</div>
+			<div class="venuelocations">
+				<div>
+					<img src="images/times-square@2x.png" alt="" />
+				</div>
+				<p>Times Square</p>
+			</div>
+
+
+			<div class="venuelocations">
+				<div>
+					<img src="images/Empire-state@2x.png" alt="" />
+				</div>
+				<p>Empire State Building</p>
+			</div>
+			<div class="venuelocations">
+				<div>
+					<img src="images/Ferris-wheel@2x.png" alt="" />
+				</div>
+				<p>Staten Island Ferry</p>
+			</div>
+		 
+			<div class="venuelocations"> 
+				<div>
+					<img src="images/Museum@2x.png" alt="" />
+				</div>
+				<p>Museum of Modern Art</p>
+			</div>
+			<div class="venuelocations">
+				<div>
+					<img src="images/brooklyn@2x.png" alt="" />
+				</div>
+				<p>Brooklyn Bridge</p>
+			</div>
+
+
+		</section>
+
+	</section>
+
+	<section class="ready text-center">
+		<div class="wrap content-grid">
+			<h1>Are you ready to learn, connect, get inspired and have fun?</h1>
+			<p>Refresh 18 is the place for you. Register now and grab your seat. We’re selling out!</p>
+			<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
+		</div>
+	</section>
+	<div class="footer">
+		<div class="l-page content-grid">
+			<div class="footer-content">
+				<div class="footer-content-left">
+					<p class="footer-para">CONNECT WITH US:</p>
+					<div class="footer-social">
+						<a class="sprite-fb-white" target="_blank" href="https://www.facebook.com/FreshworksInc/"></a>
+						<a class="sprite-tw-white" target="_blank" href="https://twitter.com/freshworksinc?lang=en"></a>
+						<a class="sprite-ln-white" target="_blank" href="https://in.linkedin.com/company/freshworks-inc"></a>
+					</div>
+					<p class="copyright">
+						<a href="https://www.freshworks.com/privacy/"><span class="privacy-link">Privacy Policy</span></a>© 2018 Freshworks
+						Inc. </p>
+				</div>
+				<div class="footer-content-center"> </div>
+				<div class="footer-content-right">
+					<p>GET IN TOUCH WITH US:</p>
+					<a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a>
+					<br>#Refresh18
+				</div>
+			</div>
+			<div class="footer-right"></div>
+		</div>
+	</div>
+
+</body>
+
+</html>
