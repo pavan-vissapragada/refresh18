@@ -1,87 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Refresh</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600" rel="stylesheet">
-  <link rel="icon" size="32x32" type="image/png" href="images/v2.png"/>
+	<link rel="icon" size="32x32" type="image/png" href="images/v2.png" />
 	<link rel="stylesheet" href="css/utils.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media-queries.css">
 	<link rel="stylesheet" href="css/agenda.css">
-  	<link rel="stylesheet" href="css/speakers.css">
+	<link rel="stylesheet" href="css/speakers.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
-<script src="js/jquery_min.js"></script>
-<script src="js/jpanel.js"></script>
-<script src="js/jmodal.js"></script>
-<link rel="stylesheet" href="css/jmodal.css">
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124029490-1"></script>
+	<script src="js/jquery_min.js"></script>
+	<script src="js/jpanel.js"></script>
+	<script src="js/jmodal.js"></script>
+	<link rel="stylesheet" href="css/jmodal.css">
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
 
-  gtag('config', 'UA-124029490-1');
-	function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-$( document ).ready(function() {
-	var jPM = $.jPanelMenu({
-    menu: '#menu',
-    trigger: '.menu-trigger',
-    duration: 300,
-		excludedPanelContent: '.stay-on-top'
+		gtag('config', 'UA-124029490-1');
+		function myFunction() {
+			var x = document.getElementById("myTopnav");
+			if (x.className === "topnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "topnav";
+			}
+		}
+		$(document).ready(function () {
+			var jPM = $.jPanelMenu({
+				menu: '#menu',
+				trigger: '.menu-trigger',
+				duration: 300,
+				excludedPanelContent: '.stay-on-top'
 
-	});
-	jPM.on();
+			});
+			jPM.on();
 
-	$('.clickMenu').click(function() {
-		$('.menu-trigger').click();
-	})
-});
-</script>
+			$('.clickMenu').click(function () {
+				$('.menu-trigger').click();
+			})
+		});
+	</script>
 
 
-<!-- <script src='//cdn.zarget.com/61608/70421.js'></script>
+	<!-- <script src='//cdn.zarget.com/61608/70421.js'></script>
 <link href="/assets/css/site-23c14408.css" rel="stylesheet"> -->
-<script type="text/javascript">
-  if (window.localStorage.getItem('fw_cookie_opt_out') !== 'yes') {
-    window.fw_trigger_ads = 'yes';
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({ event: 'trigger_ads' });
-  }
-</script>
-
+	<script type="text/javascript">
+		if (window.localStorage.getItem('fw_cookie_opt_out') !== 'yes') {
+			window.fw_trigger_ads = 'yes';
+			window.dataLayer = window.dataLayer || [];
+			window.dataLayer.push({ event: 'trigger_ads' });
+		}
+	</script>
+	<script src="js/autopilot.js"></script>
 </head>
+
 <body>
-<header class="main stay-on-top">
-	    <ul id="menu" style="display: none;">
+	<header class="main stay-on-top">
+		<ul id="menu" style="display: none;">
 			<li class="clickMenu"><a href="../#about">About</a></li>
 			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
 			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
-			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
+			<li class="clickMenu"><a href="venue.html">Venue</a></li>
 			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
 		</ul>
-	    <div id="trigger">
-				<a href="javascript:void(0);" class="icon menu-trigger">
-					<i class="fa fa-bars"></i>
-				</a>
-				<div class="logo-wrapper"><a href="/" class="logo"></a></div>
+		<div id="trigger">
+			<a href="javascript:void(0);" class="icon menu-trigger">
+				<i class="fa fa-bars"></i>
+			</a>
+			<div class="logo-wrapper"><a href="/" class="logo"></a></div>
 
-			</div>
-</header>
-<dheader class="stay-on-top">
+		</div>
+	</header>
+	<dheader class="stay-on-top">
 		<div class="wrap content-grid">
 			<div class="logo-wrapper">
-		    <a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
+				<a href="javascript:void(0);" class="icon" onclick="displayDropdown()">
 					<i class="fa fa-bars"></i>
 				</a>
 				<a href="/" class="logo fleft"></a>
@@ -91,7 +93,7 @@ $( document ).ready(function() {
 					<li><a href="../#about">About</a></li>
 					<li><a href="agenda.html">Agenda</a></li>
 					<li><a href="speakers.html">Speakers</a></li>
-					<!-- <li><a href="venue.html">Venue</a></li> -->
+					<li><a href="venue.html">Venue</a></li>
 					<li><a href="faq.html">FAQ</a></li>
 				</ul>
 				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
@@ -105,197 +107,338 @@ $( document ).ready(function() {
 		</div>
 	</section>
 
-<section class="speaker" id="speakers">
+	<section class="speaker" id="speakers">
 
-	<div class="wrap content-grid">
-		<ul class="speakers-list float-block clearfix">
-			<li>
-				<div class="photo">
-					<img src="images/katie.png" alt="">
+		<div class="wrap content-grid">
+			<ul class="speakers-list float-block clearfix">
+				<li>
+					<div class="photo">
+						<img src="images/aaron.png" alt="">
+					</div>
+					<h5>Aaron Ross</h5>
+					<p>Co-CEO<br> Predictable Revenue Inc.</p>
+					<a href="#ex0" rel="modal:open">View Bio</a>
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/motoceo" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/aaronross/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/katie.png" alt="">
+					</div>
+					<h5>Kate Leggett</h5>
+					<p>VP & Principal Analyst<br>Forrester Research</p>
+					<a href="#ex1" rel="modal:open">View Bio</a>
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/speaker-1.png" alt="">
+					</div>
+					<h5>Girish Mathrubootham</h5>
+					<p>CEO <br>Freshworks</p>
+					<a href="#ex3" rel="modal:open">View Bio</a>
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/mrgirish" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+
+				<li>
+
+
+					<div class="photo">
+						<img src="images/troy.png" alt="">
+					</div>
+					<h5>Troy DuMoulin</h5>
+					<p>VP, Research & Development<br>Pink Elephant</p>
+					<a href="#ex2" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/TroyDuMoulin" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/troy-dumoulin-148235/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+
+				<li>
+					<div class="photo">
+						<img src="images/julie.png" alt="">
+					</div>
+					<h5>Julie Mohr</h5>
+					<p>Author, Speaker & Consultant</p>
+					<a href="#ex4" rel="modal:open">View Bio</a>
+
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/stephen.png" alt="">
+					</div>
+					<h5>Stephen Mann</h5>
+					<p>Principal Analyst<br>ITSM.tools</p>
+					<a href="#ex5" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/speaker-3.png" alt="">
+					</div>
+					<h5>David Thompson</h5>
+					<p>CMO <br>Freshworks</p>
+					<a href="#ex6" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/JBarrows.png" alt="">
+					</div>
+					<h5>John Barrows</h5>
+					<p>CEO<br>JBarrows Sales Training</p>
+					<a href="#ex7" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/johnbarrows/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+
+				<li>
+					<div class="photo">
+						<img src="images/BrianEngles.jpeg" alt="">
+					</div>
+					<h5> Brian Engles</h5>
+					<p>Director of Partnerships,<br> Facilitron</p>
+					<a href="#ex8" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://www.linkedin.com/in/brian-engles-8a80a51b/" target="_blank" class="sprite-tw-grey"></a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="photo">
+						<img src="images/LauraCuttill.jpeg" alt="">
+					</div>
+					<h5> Laura Cuttill </h5>
+					<p>Practice Lead,<br> Advertas</p>
+					<a href="#ex9" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://www.linkedin.com/in/laura-cuttill-11a4698/" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</li>
+
+				<li>
+					<div class="photo">
+						<img src="images/RobSchmidt.jpg" alt="">
+					</div>
+					<h5> Rob Schmidt </h5>
+					<p>CTO, <br>Offset Solar</p>
+					<a href="#ex10" rel="modal:open">View Bio</a>
+					<!-- <a href="">View Bio</a> -->
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://www.linkedin.com/in/robert-schmidt-050bb96b/" target="_blank" class="sprite-tw-grey"></a></li>
+						<!-- 	<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li> -->
+					</ul>
+				</li>
+
+				<li>
+						<div class="photo">
+							<img src="images/annet.png" alt="">
+						</div>
+						<h5> Annette Franz</h5>
+						
+						<p>CEO <br>CX Journey.Inc</p>
+						<a href="#ex11" rel="modal:open">View Bio</a>
+						<!-- <a href="">View Bio</a> -->
+						<ul class="social-link float-block clearfix">
+							<!-- <li><a href="https://www.linkedin.com/in/robert-schmidt-050bb96b/" target="_blank" class="sprite-tw-grey"></a></li> -->
+							<!-- 	<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li> -->
+						</ul>
+					</li>
+
+					<li>
+							<div class="photo">
+								<img src="images/brent.jpg" alt="">
+							</div>
+							<h5> 	Brent Leary </h5>
+							<p>co-founder and Partner <br>CRM Essentials LLC </p>
+							<a href="#ex12" rel="modal:open">View Bio</a>
+							<!-- <a href="">View Bio</a> -->
+							<ul class="social-link float-block clearfix">
+								<!-- <li><a href="https://www.linkedin.com/in/robert-schmidt-050bb96b/" target="_blank" class="sprite-tw-grey"></a></li> -->
+								<!-- 	<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li> -->
+							</ul>
+						</li>
+
+			</ul>
+		</div>
+	</section>
+
+	<p class="text-center announce">
+		...more speakers coming your way - Stay tuned!</p>
+
+	<section class="ready text-center">
+		<div class="wrap content-grid">
+			<h1>Are you ready to learn, connect, get inspired and have fun?</h1>
+			<p>Refresh 18 is the place for you. Register now and grab your seat. We’re selling out!</p>
+			<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
+		</div>
+	</section>
+
+	<div class="footer">
+		<div class="l-page content-grid">
+			<div class="footer-content">
+				<div class="footer-content-left">
+					<p class="footer-para">CONNECT WITH US:</p>
+					<div class="footer-social">
+						<a class="sprite-fb-white" target="_blank" href="https://www.facebook.com/FreshworksInc/"></a>
+						<a class="sprite-tw-white" target="_blank" href="https://twitter.com/freshworksinc?lang=en"></a>
+						<a class="sprite-ln-white" target="_blank" href="https://in.linkedin.com/company/freshworks-inc"></a>
+					</div>
+					<p class="copyright">
+						<a href="https://www.freshworks.com/privacy/"><span class="privacy-link">Privacy Policy</span></a>© 2018 Freshworks
+						Inc. </p>
 				</div>
-				<h5>Kate leggett</h5>
-				<p>VP & Principal Analyst<br>Forrester Research</p>
-				<a href="#ex1" rel="modal:open">View Bio</a>
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
-					<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-			</li>
-			<li>
+				<div class="footer-content-center"> </div>
+				<div class="footer-content-right">
+					<p>GET IN TOUCH WITH US:</p>
+					<a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a>
+					<br>#Refresh18
+				</div>
+			</div>
+			<div class="footer-right"></div>
+		</div>
+	</div>
+
+	<div id="ex0" class="modal">
+		<div class="modal-content-wrapper">
+			<h3 class="text-center speaker-bio">Speaker Bio</h3>
+			<div class="bio-wrapper">
+				<div class="info-wrapper">
+					<div class="photo">
+						<img src="images/aaron.png" alt="">
+					</div>
+					<h5>Aaron Ross</h5>
+					<p>Co-CEO<br> Predictable Revenue Inc.</p>
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</div>
+				<div class="speaker-right scrollable">
+					<p>
+						Aaron Ross is the author of From Impossible To Inevitable and Predictable Revenue (called “The Sales Bible of Silicon Valley”).
+						He is the co-founder of Predictable Revenue Inc, The Outbound Success Company, and also the co-founder of PredictableUniversity.com,
+						delivering the world’s most effective outbound sales training. Aaron was also an EIR (Entrepreneur-in-Residence) at
+						Alloy Ventures, a $1 billion venture capital firm. Aaron was CEO of LeaseExchange, an online equipment leasing marketplace.
+						He graduated from Stanford University and is an ex-Ironman triathlete and graduate of the Boulder Outdoor Survival
+						School.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
+	</div>
+
+	<div id="ex1" class="modal">
+		<div class="modal-content-wrapper">
+			<h3 class="text-center speaker-bio">Speaker Bio</h3>
+			<div class="bio-wrapper">
+				<div class="info-wrapper">
+					<div class="photo">
+						<img src="images/katie.png" alt="">
+					</div>
+					<h5>Kate Leggett</h5>
+					<p>VP & Principal Analyst<br>Forrester Research</p>
+					<ul class="social-link float-block clearfix">
+						<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
+					</ul>
+				</div>
+				<div class="speaker-right scrollable">
+					<p>
+						Kate is a leading market analyst for CRM and customer service solutions. She is a seasoned High-tech professional with extensive
+						product marketing, product management and operations experience.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
+	</div>
+	<div id="ex2" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
 				<div class="photo">
 					<img src="images/troy.png" alt="">
 				</div>
 				<h5>Troy DuMoulin</h5>
 				<p>VP, Research & Development<br>Pink Elephant</p>
-				<a href="#ex2" rel="modal:open">View Bio</a>
 				<!-- <a href="">View Bio</a> -->
 				<ul class="social-link float-block clearfix">
 					<li><a href="https://twitter.com/TroyDuMoulin" target="_blank" class="sprite-tw-grey"></a></li>
 					<li><a href="https://www.linkedin.com/in/troy-dumoulin-148235/" target="_blank" class="sprite-ln-grey"></a></li>
 				</ul>
-			</li>
-			<li>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>Troy is a leading ITIL® IT Governance and Lean IT authority with a solid and rich background in Executive IT Management
+					consulting. Troy holds the ITIL Expert certifications and has extensive experience in leading IT Service Management
+					(ITSM) programs with a regional and global scope.<br><br> He is a frequent speaker at IT Management events and is a
+					contributing author to multiple ITSM and Lean IT books, papers and official ITIL publications including ITIL’s Planning
+					To Implement IT Service Management and Continual Service Improvement.
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="ex3" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
 				<div class="photo">
 					<img src="images/speaker-1.png" alt="">
 				</div>
 				<h5>Girish Mathrubootham</h5>
 				<p>CEO <br>Freshworks</p>
-				<a href="#ex3" rel="modal:open">View Bio</a>
 				<ul class="social-link float-block clearfix">
 					<li><a href="https://twitter.com/mrgirish" target="_blank" class="sprite-tw-grey"></a></li>
 					<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-			</li>
-			<li>
-				<div class="photo">
-					<img src="images/julie.png" alt="">
-				</div>
-				<h5>Julie mohr</h5>
-				<p>Author, Speaker & Consultant</p>
-				<a href="#ex4" rel="modal:open">View Bio</a>
-
-				<!-- <a href="">View Bio</a> -->
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
-					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-			</li>
-			<li>
-				<div class="photo">
-					<img src="images/stephen.png" alt="">
-				</div>
-				<h5>Stephen mann</h5>
-				<p>Principal Analyst<br>ITSM.tools</p>
-				<a href="#ex5" rel="modal:open">View Bio</a>
-				<!-- <a href="">View Bio</a> -->
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
-					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-			</li>
-			<li>
-				<div class="photo">
-					<img src="images/speaker-3.png" alt="">
-				</div>
-				<h5>David Thompson</h5>
-				<p>CMO <br>Freshworks</p>
-				<a href="#ex6" rel="modal:open">View Bio</a>
-				<!-- <a href="">View Bio</a> -->
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
-</section>
-
-<p class="text-center announce">...more speakers to be announced soon</p>
-
-<section class="ready text-center">
-	<div class="wrap content-grid">
-		<h1>Are you ready to learn, connect, get inspired and have fun?</h1>
-		<p>Refresh 18 is the place for you. Register now and grab your seat. We’re selling out!</p>
-		<a href="https://register.refresh18.com/" class="btn-primary large">Register Now</a>
-	</div>
-</section>
-
-<div class="footer">
-	<div class="l-page content-grid">
-		<div class="footer-content">
-			<div class="footer-content-left">
-				<p class="footer-para">CONNECT WITH US:</p>
-				<div class="footer-social">
-					<a class="sprite-fb-white" target="_blank" href="https://www.facebook.com/FreshworksInc/"></a>
-					<a class="sprite-tw-white" target="_blank" href="https://twitter.com/freshworksinc?lang=en"></a>
-					<a class="sprite-ln-white" target="_blank" href="https://in.linkedin.com/company/freshworks-inc"></a>
-				</div>
-				<p class="copyright">
-					<a href="https://www.freshworks.com/privacy/"><span class="privacy-link">Privacy Policy</span></a>© 2018 Freshworks Inc. </p>
-			</div>
-			<div class="footer-content-center"> </div>
-			<div class="footer-content-right">
-				<p>GET IN TOUCH WITH US:</p>
-				<a href="mailto:refreshconf@freshworks.com">refreshconf@freshworks.com</a>
-				<br>#Refresh18
-			</div>
-		</div>
-		<div class="footer-right"></div>
-	</div>
-</div>
-
-<div id="ex1" class="modal">
-	<div class="modal-content-wrapper">
-		<h3 class="text-center speaker-bio">Speaker Bio</h3>
-		<div class="bio-wrapper">
-			<div class="info-wrapper">
-				<div class="photo">
-					<img src="images/katie.png" alt="">
-				</div>
-				<h5>Kate leggett</h5>
-				<p>VP & Principal Analyst<br>Forrester Research</p>
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://twitter.com/kateleggett" target="_blank" class="sprite-tw-grey"></a></li>
-					<li><a href="https://www.linkedin.com/in/kate-leggett-432417/" target="_blank" class="sprite-ln-grey"></a></li>
 				</ul>
 			</div>
 			<div class="speaker-right scrollable">
-				<p>
-				Kate is a leading market analyst for CRM and customer service solutions. She is a seasoned High-tech professional with extensive product marketing, product management and operations experience.
-				</p>
+				<p>Girish Mathrubootham is the founder and CEO of Freshworks, one of the world’s fastest-growing SaaS product company,
+					winning the Economic Times Startup of the Year in 2016, and the Business Standard Startup of the Year in 2017. Freshworks
+					now has a suite of products for businesses worldwide - Freshdesk, Freshservice, Freshsales, Freshcaller, Freshteam,
+					Freshchat and Freshmarketer.
+					<br><br> Girish is part of the Product Council for NASSCOM, the trade association of Indian software companies, and
+					actively works to promote and nurture software product companies. He has invested in several early stage startups, and
+					is passionate about building a global product company. Having set the vision and direction for the company since inception,
+					his focus on Freshworks’ values and its culture have been instrumental in taking the organisation to where it is today.</p>
+
 			</div>
 		</div>
 	</div>
-
-	<div><a href="#close-modal" rel="modal:close" class="close-modal ">Close</a></div>
-</div>
-<div id="ex2" class="modal">
-	<h3 class="text-center speaker-bio">Speaker Bio</h3>
-	<div class="bio-wrapper">
-		<div class="info-wrapper julie">
-			<div class="photo">
-				<img src="images/troy.png" alt="">
-			</div>
-			<h5>Troy DuMoulin</h5>
-			<p>VP, Research & Development<br>Pink Elephant</p>
-			<!-- <a href="">View Bio</a> -->
-			<ul class="social-link float-block clearfix">
-				<li><a href="https://twitter.com/TroyDuMoulin" target="_blank" class="sprite-tw-grey"></a></li>
-				<li><a href="https://www.linkedin.com/in/troy-dumoulin-148235/" target="_blank" class="sprite-ln-grey"></a></li>
-			</ul>
-		</div>
-		<div class="speaker-right scrollable">
-				<p>Troy is a leading ITIL® IT Governance and Lean IT authority with a solid and rich background in Executive IT Management consulting. Troy holds the ITIL Expert certifications and has extensive experience in leading IT Service Management (ITSM) programs with a regional and global scope.<br><br>
-				He is a frequent speaker at IT Management events and is a contributing author to multiple ITSM and Lean IT books, papers and official ITIL publications including ITIL’s Planning To Implement IT Service Management and Continual Service Improvement.
-				</p>
-		</div>
-	</div>
-</div>
-<div id="ex3" class="modal">
-	<h3 class="text-center speaker-bio">Speaker Bio</h3>
-	<div class="bio-wrapper">
-		<div class="info-wrapper julie">
-			<div class="photo">
-					<img src="images/speaker-1.png" alt="">
-				</div>
-				<h5>Girish Mathrubootham</h5>
-				<p>CEO <br>Freshworks</p>
-				<ul class="social-link float-block clearfix">
-					<li><a href="https://twitter.com/mrgirish" target="_blank" class="sprite-tw-grey"></a></li>
-					<li><a href="https://www.linkedin.com/in/girish1/" target="_blank" class="sprite-ln-grey"></a></li>
-				</ul>
-		</div>
-		<div class="speaker-right scrollable">
-				<p>Girish Mathrubootham is the founder and CEO of Freshworks, one of the world’s fastest-growing SaaS product company, winning the Economic Times Startup of the Year in 2016, and the Business Standard Startup of the Year in 2017. Freshworks now has a suite of products for businesses worldwide - Freshdesk, Freshservice, Freshsales, Freshcaller, Freshteam, Freshchat and Freshmarketer.
-					<br><br>
-				Girish is part of the Product Council for NASSCOM, the trade association of Indian software companies, and actively works to promote and nurture software product companies. He has invested in several early stage startups, and is passionate about building a global product company. Having set the vision and direction for the company since inception, his focus on Freshworks’ values and its culture have been instrumental in taking the organisation to where it is today.</p>
-
-		</div>
-	</div>
-</div>
-<div id="ex4" class="modal">
-	<h3 class="text-center speaker-bio">Speaker Bio</h3>
-	<div class="bio-wrapper">
-		<div class="info-wrapper julie">
+	<div id="ex4" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
 				<div class="photo">
 					<img src="images/julie.png" alt="">
 				</div>
@@ -306,57 +449,251 @@ $( document ).ready(function() {
 					<li><a href="https://twitter.com/JulieMohr" target="_blank" class="sprite-tw-grey"></a></li>
 					<li><a href="https://www.linkedin.com/in/juliemohr/" target="_blank" class="sprite-ln-grey"></a></li>
 				</ul>
-		</div>
-		<div class="speaker-right scrollable">
-				<p>Julie is a dynamic, engaging change agent who brings authenticity, integrity, and passion to practitioners worldwide. Through her books, articles, speaking, consulting, and teaching — her purpose is to spark change in the world with thought-provoking dialog and interaction. Julie has a B.S. degree in computer science from The Ohio State University, a MaED from the University of Phoenix, and is currently pursuing her Ph.D. in Management and Organizational Leadership in Information Systems & Technology from the University of Phoenix. She is an ITIL Expert, Certified Help Desk Director, and Certified Governance IT Professional.
-					<br>
-					Julie captivates audiences at conferences worldwide on topics of authentic leadership, business strategy, knowledge management, organizational culture, and innovation.</p>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>Julie is a dynamic, engaging change agent who brings authenticity, integrity, and passion to practitioners worldwide.
+					Through her books, articles, speaking, consulting, and teaching — her purpose is to spark change in the world with thought-provoking
+					dialog and interaction. Julie has a B.S. degree in computer science from The Ohio State University, a MaED from the
+					University of Phoenix, and is currently pursuing her Ph.D. in Management and Organizational Leadership in Information
+					Systems & Technology from the University of Phoenix. She is an ITIL Expert, Certified Help Desk Director, and Certified
+					Governance IT Professional.
+					<br> Julie captivates audiences at conferences worldwide on topics of authentic leadership, business strategy, knowledge
+					management, organizational culture, and innovation.</p>
 
+			</div>
 		</div>
 	</div>
-</div>
-<div id="ex5" class="modal">
-	<h3 class="text-center speaker-bio">Speaker Bio</h3>
-	<div class="bio-wrapper">
-		<div class="info-wrapper julie">
+	<div id="ex5" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
 				<div class="photo">
 					<img src="images/stephen.png" alt="">
 				</div>
-				<h5>Stephen mann</h5>
+				<h5>Stephen Mann</h5>
 				<p>Principal Analyst and Content Director<br>ITSM.tools</p>
 				<!-- <a href="">View Bio</a> -->
 				<ul class="social-link float-block clearfix">
 					<li><a href="https://twitter.com/stephenmann" target="_blank" class="sprite-tw-grey"></a></li>
 					<li><a href="https://www.linkedin.com/in/stephenamann" target="_blank" class="sprite-ln-grey"></a></li>
 				</ul>
-		</div>
-		<div class="speaker-right scrollable">
-				<p>Stephen is Principal Analyst and Content Director at the ITSM-focused industry analyst firm ITSM.tools. Also an independent IT and IT service management marketing content creator, and a frequent blogger, writer, and presenter on the challenges and opportunities for IT service management professionals.
-						If more is needed...
-						<br><br>
-						Stephen previously held positions in IT research and analysis (at IT industry analyst firms Ovum and Forrester and the UK Post Office), IT service management consultancy, enterprise IT service desk and IT service management, IT asset management, innovation and creativity facilitation, project management, finance consultancy, internal audit, and product marketing for a SaaS IT service management technology vendor.</p>
-
-		</div>
-	</div>
-</div>
-<div id="ex6" class="modal">
-	<h3 class="text-center speaker-bio">Speaker Bio</h3>
-	<div class="bio-wrapper">
-		<div class="info-wrapper julie">
-			<div class="photo">
-				<img src="images/speaker-3.png" alt="">
 			</div>
-			<h5>David Thompson</h5>
-			<p>CMO <br>Freshworks</p>
-			<ul class="social-link float-block clearfix">
-					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
-			</ul>
-		</div>
-		<div class="speaker-right scrollable">
-				<p>David as an Industry thought-leader in digital marketing and emerging technology sectors including webconferencing, digital marketing, data science, collaboration, online marketplaces. He has a deep understanding of positioning, M&A, fundraising, board management, public company operations and strategy.</p>
+			<div class="speaker-right scrollable">
+				<p>Stephen is Principal Analyst and Content Director at the ITSM-focused industry analyst firm ITSM.tools. Also an independent
+					IT and IT service management marketing content creator, and a frequent blogger, writer, and presenter on the challenges
+					and opportunities for IT service management professionals. If more is needed...
+					<br><br> Stephen previously held positions in IT research and analysis (at IT industry analyst firms Ovum and Forrester
+					and the UK Post Office), IT service management consultancy, enterprise IT service desk and IT service management, IT
+					asset management, innovation and creativity facilitation, project management, finance consultancy, internal audit, and
+					product marketing for a SaaS IT service management technology vendor.</p>
 
+			</div>
 		</div>
 	</div>
-</div>
+	<div id="ex6" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/speaker-3.png" alt="">
+				</div>
+				<h5>David Thompson</h5>
+				<p>CMO <br>Freshworks</p>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/davidrossthompson/" target="_blank" class="sprite-ln-grey"></a></li>
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>David as an Industry thought-leader in digital marketing and emerging technology sectors including webconferencing,
+					digital marketing, data science, collaboration, online marketplaces. He has a deep understanding of positioning, M&A,
+					fundraising, board management, public company operations and strategy.</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="ex7" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/JBarrows.png" alt="">
+				</div>
+				<h5>John Barrows</h5>
+				<p>CEO <br>JBarrows Sales Training</p>
+				<ul class="social-link float-block clearfix">
+
+					<li><a href="https://www.linkedin.com/in/johnbarrows/" target="_blank" class="sprite-ln-grey"></a></li>
+					<li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li>
+
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>David as an Industry thought-leader in digital marketing and emerging technology sectors including webconferencing,
+					digital marketing, data science, collaboration, online marketplaces. He has a deep understanding of positioning, M&A,
+					fundraising, board management, public company operations and strategy.</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="ex8" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/BrianEngles.jpeg" alt="">
+				</div>
+				<h5>Brian Engles</h5>
+				<p>Director of Partnerships,<br> Facilitron</p>
+				<ul class="social-link float-block clearfix">
+
+					<li><a href="https://www.linkedin.com/in/brian-engles-8a80a51b/" target="_blank" class="sprite-ln-grey"></a></li>
+					<!-- <li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li> -->
+
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>Brian Engles is the director of partnerships at Facilitron. Prior to joining Facilitron, Brian had a decade-long career
+					at Barracuda Networks. </p>
+
+				<p>Founded in 2014, Silicon Valley-based Facilitron is a cloud-based facility use management platform designed for school
+					districts and colleges to manage how their facilities are being used, and provide a portal for community groups to find
+					and rent available space.
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div id="ex9" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/LauraCuttill.jpeg" alt="">
+				</div>
+				<h5> Laura Cuttill </h5>
+				<p>Practice Lead,<br> Advertas</p>
+				<ul class="social-link float-block clearfix">
+					<li><a href="https://www.linkedin.com/in/laura-cuttill-11a4698/" target="_blank" class="sprite-tw-grey"></a></li>
+					<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li>
+					<!-- <li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li> -->
+
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>Laura A. Cuttill is a strategic and operational leader with a demonstrated ability to fuse business, financial, and
+					technology interests into streamlined, profitable operations. Laura began her career in the Schlumberger Information
+					Solutions department, working on identity management roll-out projects for Chevron and ExxonMobil. In 2004 she joined
+					Hal Green as a co-founder of Advertas, adding her organizational, analytical, and creative problem-solving skills to
+					the team. She serves her clients with a unique vision of using cutting-edge software and marketing practices as a foundation
+					to drive business growth.
+
+				</p>
+
+			</div>
+		</div>
+	</div>
+	<div id="ex10" class="modal">
+		<h3 class="text-center speaker-bio">Speaker Bio</h3>
+		<div class="bio-wrapper">
+			<div class="info-wrapper julie">
+				<div class="photo">
+					<img src="images/RobSchmidt.jpg" alt="">
+				</div>
+				<h5> `Schmidt</h5>
+				<p>CTO, <br>Offset Solar</p>
+				<ul class="social-link float-block clearfix">
+
+					<li><a href="https://www.linkedin.com/in/robert-schmidt-050bb96b/" target="_blank" class="sprite-tw-grey"></a></li>
+
+
+				</ul>
+			</div>
+			<div class="speaker-right scrollable">
+				<p>
+
+
+					Rob is an emerging leader in digital strategies and technological solutions for the "dirty" business sector. His high level
+					of success as a digital marketer comes from his fundamental understanding of the customer journey, as well as the utilization
+					of technology to automate sequences, systems, and processes. Offset Solar was founded in 2017 with a heartfelt vision:
+					everyone should have access to clean, renewable power both at home and abroad. Energy is a problem. Nearly 600 million
+					people in Africa have no access to electricity. Without electricity families have no clean source of light, leaving
+					millions to rely on expensive and dangerous alternatives. This especially has adverse effects on childhood education—Offset
+					Solar’s goal is to help these communities and children in need by aiding in the distribution of solar power. Screen
+					reader support enabled. Rob is an emerging leader in digital strategies and technological solutions for the "dirty"
+					business sector. His high level of success as a digital marketer comes from his fundamental understanding of the customer
+					journey, as well as the utilization of technology to automate sequences, systems, and processes. Offset Solar was founded
+					in 2017 with a heartfelt vision: everyone should have access to clean, renewable power both at home and abroad. Energy
+					is a problem. Nearly 600 million people in Africa have no access to electricity. Without electricity families have no
+					clean source of light, leaving millions to rely on expensive and dangerous alternatives. This especially has adverse
+					effects on childhood education—Offset Solar’s goal is to help these communities and children in need by aiding in the
+					distribution of solar power.
+
+
+
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div id="ex11" class="modal">
+			<h3 class="text-center speaker-bio">Speaker Bio</h3>
+			<div class="bio-wrapper">
+				<div class="info-wrapper julie">
+					<div class="photo">
+						<img src="images/annet.png" alt="">
+					</div>
+					<h5> Annette Franz </h5>
+					<p>CEO<br>  CX Journey.Inc</p>
+					<ul class="social-link float-block clearfix">
+						<!-- <li><a href="https://www.linkedin.com/in/laura-cuttill-11a4698/" target="_blank" class="sprite-tw-grey"></a></li>
+						<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li> -->
+						<!-- <li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li> -->
+	
+					</ul>
+				</div>
+				<div class="speaker-right scrollable">
+					<p>Annette Franz is founder and CEO of CX Journey Inc. She's got 25 years of experience in both helping companies understand their employees and customers and identifying what drives retention, satisfaction, engagement, and the overall experience - so that, together, we can design a better experience for all constituents.
+
+							Annette was named one of “The 100 Most Influential Tech Women on Twitter” by Business Insider and is regularly recognized by companies around the world as a top influencer in Customer Experience.
+							
+							She co-hosts the weekly #CXChat on Twitter, serves as an executive officer on the Board of Directors of the Customer Experience Professionals Association (CXPA), mentors other professionals in this field to help them advance their careers, and is a speaker and an avid writer; you can find her work not only on her own blog but also on Business2Community, CustomerThink, Quality Digest, APICS Magazine, and more. She is a Certified Customer Experience Professional (CCXP), and she is also an official member of the Forbes Coaches Council, an invitation-only community for successful business and career coaches.
+	
+					</p>
+	
+				</div>
+			</div>
+		</div>
+
+		<div id="ex12" class="modal">
+				<h3 class="text-center speaker-bio">Speaker Bio</h3>
+				<div class="bio-wrapper">
+					<div class="info-wrapper julie">
+						<div class="photo">
+							<img src="images/brent.jpg" alt="">
+						</div>
+						<h5>Brent Leary</h5>
+						<p>co-founder and Partner <br>CRM Essentials LLC </p>
+						<ul class="social-link float-block clearfix">
+							<!-- <li><a href="https://www.linkedin.com/in/laura-cuttill-11a4698/" target="_blank" class="sprite-tw-grey"></a></li>
+							<li><a href="https://twitter.com/LGreenCuttill" target="_blank" class="sprite-ln-grey"></a></li> -->
+							<!-- <li><a href="https://twitter.com/JohnMBarrows" target="_blank" class="sprite-tw-grey"></a></li> -->
+		
+						</ul>
+					</div>
+					<div class="speaker-right scrollable">
+						<p>Brent Leary is a CRM industry analyst, advisor, author, speaker and award-winning blogger. He is co-founder and Partner of CRM Essentials LLC, an Atlanta-based CRM advisory firm covering tools and strategies for improving business relationships. He is the chair of CRM Evolution 2019, CRM Magazine's annual industry event. Leary's new blog, Voices Carry, is featured on ZDNet and focuses on how voice-first devices and interfaces are changing the rules of customer engagement. He writes regularly for CRM magazine and The Atlanta Tribune, where he also serves on the editorial advisory board. Leary hosts the weekly One on One conversation series for Small Business Trends, and co-hosts two video podcasts - The CRM Playaz and Watching Amazon. He is in the process of writing his next book, "The Amazon Effect: How a New Customer Culture is Creating Crazy New Business Opportunities and Killing Companies That Won't Adapt", due out in 2019.
+		
+						</p>
+		
+					</div>
+				</div>
+			</div>
+
 </body>
+
 </html>

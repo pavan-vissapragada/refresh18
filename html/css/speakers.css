@@ -32,6 +32,7 @@ section {
 .announce {
   color:#4A4A4A;
   margin-bottom: 60px;
+  font-size: 1.40rem !important;
 }
 .footer {
   background: none;

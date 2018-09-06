@@ -33,6 +33,17 @@
 				x.className = "topnav";
 			}
 		}
+
+		$(window).load(function () {
+
+			$(".grild4 img").show()
+			$("	.venuepart4 .rightarea img").show()
+		
+
+
+		})
+
+
 		$(document).ready(function () {
 
 			//alert('hi')
@@ -69,6 +80,11 @@
 			$(".initopen").addClass('active')
 			$('.accordion:after').addClass('iconbg')
 			$('.accordion:after').css("color", "yellow");
+
+			$(".takemap").on('click',function(){
+				window.open('https://www.google.com/maps/place/Grand+Hyatt+New+York/@40.752038,-73.976454,20z/data=!4m7!3m6!1s0x0:0x500317cc3cc9f519!5m1!1s2018-09-03!8m2!3d40.7520381!4d-73.9764538?hl=en-GB')
+
+			})
 		});
 	</script>
 
@@ -83,10 +99,8 @@
 		}
 	</script>
 
-	<script>
-
-	</script>
-
+ 
+	<script src="js/autopilot.js"></script>
 </head>
 
 <body>
@@ -95,7 +109,7 @@
 			<li class="clickMenu"><a href="../#about">About</a></li>
 			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
 			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
-			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
+			<li class="clickMenu"><a href="venue.html">Venue</a></li>
 			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
 		</ul>
 		<div id="trigger">
@@ -119,7 +133,7 @@
 					<li><a href="../#about">About</a></li>
 					<li><a href="agenda.html">Agenda</a></li>
 					<li><a href="speakers.html">Speakers</a></li>
-					<!-- <li><a href="venue.html">Venue</a></li> -->
+					<li><a href="venue.html">Venue</a></li>
 					<li><a href="faq.html">FAQ</a></li>
 				</ul>
 				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
@@ -128,7 +142,7 @@
 	</dheader>
 	<section class="agenda-bg">
 		<div class="text-center">
-			<h2>Venue</h2>
+			<h2 id="venuetext">Venue</h2>
 		</div>
 	</section>
 
@@ -139,34 +153,41 @@
 		<p>Welcome to the grandest stage in the biggest metropolis of the country! Immerse yourself in the joys of midtown New
 			York and network with the brightest minds in the industry.
 		</p>
-		<div class='directionbtn'>Get Directions</div>
+		<div class='takemap directionbtn'>Get Directions</div>
 	</section>
 
 	<section class="venuepart2">
 
 		<section class="leftarea">
-			<img src="images/grid-4.png" alt="">
+			<img class='listimages' src="images/inimg.png" alt="">
 		</section>
 		<section class="rightarea">
 			<h2>Getting to Grand hyatt</h2>
 
 			<div class="justflex">
 				<div class="inner">
-					<div>Grand Central Terminal </div>
-					<h4>230 feet </h4>
-				</div>
-				<div class="inner">
-					<div>LaGuardia Airport
+					<div>
+						<p>Grand Central Terminal </p>
 					</div>
-					<h4>9 miles </h4>
+					<h4> <span>230</span> feet </h4>
 				</div>
 				<div class="inner">
-					<div>John F. Kennedy (JFK) International Airport </div>
-					<h4>15 miles </h4>
+					<div>
+						<p>LaGuardia Airport</p>
+					</div>
+					<h4><span>9</span> miles </h4>
 				</div>
 				<div class="inner">
-					<div>Newark Liberty International Airport</div>
-					<h4>17 miles </h4>
+					<div>
+						<p>John F. Kennedy (JFK) International Airport </p>
+					</div>
+					<h4><span>15 </span>miles </h4>
+				</div>
+				<div class="inner">
+					<div>
+						<p>Newark Liberty International Airport</p>
+					</div>
+					<h4><span>17</span> miles </h4>
 				</div>
 			</div>
 
@@ -181,26 +202,39 @@
 		<h4>Discover what it is to be a New Yorker; self-driving isn’t prefferred here!</h4>
 
 		<div class="grild4">
-			<h2>Yellow Cab</h2>
-			<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
-				Hyatt.
-			</p>
+			<img src="images/yellowcab.png" alt="">
+			<div>
+				<h2>Yellow Cab</h2>
+				<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
+					Hyatt.
+				</p>
+			</div>
 		</div>
 		<div class="grild4">
-			<h2> Ride the Train</h2>
-			<p>TFancy experiencing one of the oldest metros in the world? The Grand Central Terminal (GCT) is right across the street.</p>
+			<img src="images/train.png" alt="">
+			<div>
+				<h2> Ride the Train</h2>
+				<p>TFancy experiencing one of the oldest metros in the world? The Grand Central Terminal (GCT) is right across the street.</p>
+
+			</div>
 		</div>
 		<div class="grild4">
-			<h2>Teleport with Airporter </h2>
-			<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
-				Hyatt.
-			</p>
+			<img src="images/bus.png" alt="">
+			<div>
+				<h2>Teleport with Airporter </h2>
+				<p>The definitive New York experience - Hail a yellow cab anywhere in the city and they’ll know their way to the Grand
+					Hyatt.
+				</p>
+			</div>
 		</div>
 		<div class="grild4">
-			<h2>Uber & Lyft</h2>
-			<p>Unsure about the crowd? You can always hail a ride through Uber or Lyft. Just make sure you find your way to Refresh
-				18!
-			</p>
+			<img src="images/uber.png" alt="">
+			<div>
+				<h2>Uber & Lyft</h2>
+				<p>Unsure about the crowd? You can always hail a ride through Uber or Lyft. Just make sure you find your way to Refresh
+					18!
+				</p>
+			</div>
 		</div>
 
 
@@ -212,7 +246,7 @@
 		</h4>
 
 		<section class="leftarea">
-			<img src="images/grid-4.png" alt="">
+			<img class='listimages' src="images/outimg.png" alt="">
 		</section>
 		<section class="rightarea">
 			<div class="venuelocations">
@@ -241,8 +275,8 @@
 				</div>
 				<p>Staten Island Ferry</p>
 			</div>
-		 
-			<div class="venuelocations"> 
+
+			<div class="venuelocations">
 				<div>
 					<img src="images/Museum@2x.png" alt="" />
 				</div>

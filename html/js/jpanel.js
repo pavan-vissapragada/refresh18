@@ -24,26 +24,26 @@
 				closeOnContentClick: true,
 
 				keyboardShortcuts: [
-					{
-						code: 27,
-						open: false,
-						close: true
-					},
-					{
-						code: 37,
-						open: false,
-						close: true
-					},
-					{
-						code: 39,
-						open: true,
-						close: true
-					},
-					{
-						code: 77,
-						open: true,
-						close: true
-					}
+					// {
+					// 	code: 27,
+					// 	open: false,
+					// 	close: true
+					// },
+					// {
+					// 	code: 37,
+					// 	open: false,
+					// 	close: true
+					// },
+					// {
+					// 	code: 39,
+					// 	open: true,
+					// 	close: true
+					// },
+					// {
+					// 	code: 77,
+					// 	open: true,
+					// 	close: true
+					// }
 				],
 
 				duration: 150,
@@ -455,6 +455,8 @@
 				$(jP.options.panel + ' > *').not(jP.menu + ', ' + jP.options.excludedPanelContent).wrapAll('<div class="' + jP.panel.replace('.','') + '"/>');
 				var menu = ( jP.options.clone )?$(jP.options.menu).clone(jP.options.keepEventHandlers):$(jP.options.menu);
 				menu.attr('id', jP.menu.replace('#','')).insertAfter(jP.options.panel + ' > ' + jP.panel);
+				//$('<div onclick="topFunction()" id="scrolltotop"  >Top</div>').insertBefore($(".jPanelMenu-panel"))
+		
 			},
 
 			resetMarkup: function() {
@@ -509,7 +511,7 @@
 			getMenu: function() { return $(jP.menu); },
 			panel: jP.panel,
 			getPanel: function() { return $(jP.panel); },
-			setPosition: function(position) {
+			setPosition: function(position) {	
 				if ( typeof(position) == "undefined" || position == null ) {
 					position = jP.options.openPosition
 				}

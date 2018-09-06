@@ -39,7 +39,7 @@ font-size:16px;
 
 
 .faq a {
-  font-size: 1.25rem;
+  font-size: 16px;
   color: #f84d74;
   font-family: "Source Sans Pro";
 }
@@ -122,6 +122,24 @@ section.location {
 
 }    
 .faq-section{
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+}
+@media screen and (max-width: 767px)  {
+
+  .faq-section section {
+    padding: 10px 0px !important;
+}
+
+.panel {
+  width: 80%;
+
+}
+.accordion{
+  font-size: 17px;
+  padding: 5px;
+}
+.accordion {
+  width: 94% !important;
+}
 }

@@ -62,7 +62,7 @@ dheader .wrap {
 }
 
 dheader nav a {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 300;
   letter-spacing: 0.8px;
   text-align: center;
@@ -71,6 +71,7 @@ dheader nav a {
   padding: 0 10px;
   margin-left: 1rem;
   transition: color 0.2s;
+  font-weight: bold;
 }
 
 dheader nav ul li {
@@ -180,7 +181,7 @@ dheader nav ul li ul:hover {
 }
 
 .intro h5 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 2.5px;
@@ -314,6 +315,7 @@ dheader nav ul li ul:hover {
 
 .speakers-list li .photo img {
   width: 100%;
+  height: 100%;
 }
 
 .speakers-list li h5 {
@@ -585,3 +587,63 @@ html {
 	position: fixed;
 	z-index: 99999999999999;
 }
+
+.priceslash{
+  /* height: 89px; */
+}
+.priceslash h3{
+  color: #FFFFFF;
+    font-family: Poppins;	
+     font-size: 1.7rem; 
+      line-height: 25px;	
+      text-align: center;
+}
+
+.priceslash h3 span{
+
+  /* height: 1.3125rem;	 */
+  width: 53px;
+  color: #FFFFFF;	font-family: Poppins;	
+  /* font-size: 21px; */
+    font-weight: 600;	line-height: 31px;
+    	text-align: center;
+
+}
+
+.grabpass{	
+  height: 23px;	width: 347px;	color: #FC5B6C;
+  	font-family: Poppins;	font-size: 16px;	font-weight: 500;	line-height: 25px;	text-align: center;}
+
+    .rightarrow {	
+      box-sizing: border-box;	height: 8px;	width: 10px;	border: 1.5px solid #FC5B6C;
+    }
+
+
+  .pasprice{
+    color: #FFFFFF;
+    font-weight: 600;
+  } 
+  
+  .priceslash a{
+    text-decoration: none;
+    color:#FC5B6C;
+  }
+
+  .strike {
+    position: relative;
+  }
+  .strike:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 2px solid;
+    border-color: inherit;
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    transform: rotate(157deg);
+    color: #f74d74;
+  }

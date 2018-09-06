@@ -34,53 +34,68 @@
 
 
 		function createmobileversion() {
-			var formjsonday1 = []
-			var formjsonday2 = []
+			// 	var formjsonday1 = []
+			// 	var formjsonday2 = []
 
-			$(".tab-content.active .track-list").each(function (index, element) {
-				$(element).find('.row').each(function (j, w) {
-					var mydom = $(this).find('.cell')
+			// 	$(".tab-content.active .track-list").each(function (index, element) {
+			// 		$(element).find('.row').each(function (j, w) {
+			// 			var mydom = $(this).find('.cell')
 
-					//title:$(mydom)[1].find('h6')}
-					var timestrings = $(mydom)[0]
-					var agendanotes = $(mydom)[1]
-					var agendatitle = $(agendanotes).find('h6')
-					var speakersname = $(agendanotes).find('.speaker-label')
-					var agendadesc = $(agendanotes).find('.agenda-desc')
-					var panellabel = $(agendanotes).find('.label')
+			// 			//title:$(mydom)[1].find('h6')}
+			// 			var timestrings = $(mydom)[0]
+			// 			var agendanotes = $(mydom)[1]
+			// 			var agendatitle = $(agendanotes).find('h6')
+			// 			var speakersname = $(agendanotes).find('.speaker-label')
+			// 			var agendadesc = $(agendanotes).find('.agenda-desc')
+			// 			var panellabel = $(agendanotes).find('.label')
 
-					var rowvalues = {
-						time: $(timestrings).text() || '',
-						agendanotes: $(agendanotes).text() || '',
-						agendatitle: $(agendatitle).text() || '',
-						speakersname: $(speakersname).text() || '',
-						agendadesc: $(agendadesc).text() || '',
-						panellabel: $(panellabel).text() || ''
-					}
+			// 			var rowvalues = {
+			// 				time: $(timestrings).text() || '',
+			// 				agendanotes: $(agendanotes).text() || '',
+			// 				agendatitle: $(agendatitle).text() || '',
+			// 				speakersname: $(speakersname).text() || '',
+			// 				agendadesc: $(agendadesc).text() || '',
+			// 				panellabel: $(panellabel).text() || ''
+			// 			}
 
-					//	console.log($(timestrings).text())
-					if (index == 0) {
-						formjsonday1.push(rowvalues)
-					} else {
-						formjsonday2.push(rowvalues)
-					}
+			// 			//	console.log($(timestrings).text())
+			// 			if (index == 0) {
+			// 				formjsonday1.push(rowvalues)
+			// 			} else {
+			// 				formjsonday2.push(rowvalues)
+			// 			}
 
-				})
+			// 		})
 
 
-			})
-			console.log('day1 ---', formjsonday1)
-			console.log('day2----', formjsonday2)
+			// 	})
+			// 	console.log('day1 ---', formjsonday1)
+			// 	console.log('day2----', formjsonday2)
 
 		}
 		$(document).ready(function () {
-			
+
+
+setTimeout(function(){
+	//alert($('header').length)
+	$('header').before('<div id="scrolltotop"  ><img onclick="topFunction()"  src="images/scrolltotop.png"></div>')
+
+},2000)
+
+			$(".timelinecontainer").addClass('hider')
 
 			if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-				$(".track-details").addClass('hider')
+				//	$(".track-details").addClass('hider')
+				$(".tab-content.active").children("span").hide()
 				$('body').addClass('agenda-mobile')
+				$(".mobile-menu,.menutrigger").show()
+				$(".select-track").hide()
+		
 			} else {
-				$(".timelinecontainer").addClass('hider')
+
+				$(".mobile-menu,.menutrigger").hide()
+				$(".select-track").show()
+				//	$(".timelinecontainer").addClass('hider')
 			}
 
 			var jPM = $.jPanelMenu({
@@ -103,6 +118,40 @@
 			})
 
 
+			$(document).on('click', ".menutrigger", function () {
+
+				//	$(this).find('arrow').toggleClass("down");
+
+				//var x = document.getElementById("mobile-menu");
+				if ($("#mobile-menu").css('display') == 'none') {
+					$("#mobile-menu").show('slow')
+					$(".arrow").removeClass('down')
+
+
+				}
+				else {
+					$("#mobile-menu").hide('slow')
+					$(".arrow").addClass('down')
+				}
+
+		
+
+			})
+
+			$(document).on('click', ".mobile-menuitems", function () {
+
+				//$(this).siblings('p').addClass('view-full');
+				$("." + $(this).text().replace(/\s/g, '')).trigger('click')
+				$(".seletedoption").text($(this).text());
+				$(".menutrigger").trigger('click')
+				$(".tab-content.active").children("span").hide()
+				//$(this).hide()
+			})
+
+
+
+
+
 		});
 	</script>
 
@@ -115,18 +164,40 @@
 			window.dataLayer = window.dataLayer || [];
 			window.dataLayer.push({ event: 'trigger_ads' });
 		}
-	</script>
 
+		window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("scrolltotop").style.display = "block";
+    } else {
+        document.getElementById("scrolltotop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+   // document.body.scrollTop = 0;
+//	document.documentElement.scrollTop = 0;
+	$('html,body').animate({ scrollTop: 0 }, 1000);
+}
+	</script>
+ 
+ 
+ <script src="js/autopilot.js"></script>
 
 </head>
 
 <body class='agenda-body'>
+	 
+
 	<header class="main stay-on-top">
+			
 		<ul id="menu" style="display: none;">
 			<li class="clickMenu"><a href="../#about">About</a></li>
 			<li class="clickMenu"><a href="agenda.html">Agenda</a></li>
 			<li class="clickMenu"><a href="speakers.html">Speakers</a></li>
-			<!-- <li class="clickMenu"><a href="venue.html">Venue</a></li> -->
+			<li class="clickMenu"><a href="venue.html">Venue</a></li>
 			<li class="clickMenu"><a href="faq.html">FAQ</a></li>
 		</ul>
 		<div id="trigger">
@@ -150,7 +221,7 @@
 					<li><a href="../#about">About</a></li>
 					<li><a href="agenda.html">Agenda</a></li>
 					<li><a href="speakers.html">Speakers</a></li>
-					<!-- <li><a href="venue.html">Venue</a></li> -->
+					<li><a href="venue.html">Venue</a></li>
 					<li><a href="faq.html">FAQ</a></li>
 				</ul>
 				<a href="https://register.refresh18.com/" class="btn-primary">Register Now</a>
@@ -160,27 +231,51 @@
 
 
 
+
 	<section class="agenda-bg">
 		<div class="text-center">
 			<h2>Agenda</h2>
 		</div>
 	</section>
+	<section class='menutrigger'>
+		<div><i class="arrow up"></i></div>
+		<div class='selecttracktxt'>Select Track</div>
 
+		<div class="seletedoption">Fresh desk</div>
+
+
+	</section>
+	<section id="mobile-menu" class='mobile-menu'>
+		<div class='mobile-menuitems'>
+			Freshdesk
+		</div>
+		<div class='mobile-menuitems'>
+			Freshservice
+		</div>
+		<div class='mobile-menuitems'>
+			Freshsales
+		</div>
+		<div class='mobile-menuitems'>
+			Partners
+		</div>
+
+
+	</section>
 	<section class="select-track">
 		<div class="wrap clearfix">
 			<h3 class="fleft">Select Track</h3>
 			<ul class="tabs fleft float-block clearfix tabmenus">
 				<li>
-					<a href="javascript:void(0);" class="tab-link active" onclick="selectTab('tab1', this)">Freshdesk</a>
+					<a href="javascript:void(0);" class="tab-link active Freshdesk" onclick="selectTab('tab1', this)">Freshdesk</a>
 				</li>
 				<li>
-					<a href="javascript:void(0);" class="tab-link" onclick="selectTab('tab2', this)">Freshservice</a>
+					<a href="javascript:void(0);" class="tab-link Freshservice" onclick="selectTab('tab2', this)">Freshservice</a>
 				</li>
 				<li>
-					<a href="javascript:void(0);" class="tab-link" onclick="selectTab('tab3', this)">Freshsales</a>
+					<a href="javascript:void(0);" class="tab-link Freshsales" onclick="selectTab('tab3', this)">Freshsales</a>
 				</li>
 				<li>
-					<a href="javascript:void(0);" class="tab-link" onclick="selectTab('tab4', this)">Marketplace</a>
+					<a href="javascript:void(0);" class="tab-link Partners" onclick="selectTab('tab4', this)">Partners</a>
 				</li>
 			</ul>
 		</div>
@@ -485,7 +580,7 @@
 						<div class="cell">
 							<span class="label red">Product</span>
 							<h6>Future of Freshdesk - Freshdesk Roadmap</h6>
-							<p> Gireesh, Director - Product Management, Freshdesk @ Freshworks</p>
+							<p class="speaker-label">Speaker: Gireesh, Director - Product Management, Freshdesk @ Freshworks</p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -608,16 +703,16 @@
 						</div>
 						<div class="cell">
 							<h6>The 7 Habits Of Highly Effective People & Leaders – Through A Lean Lens</h6>
-							<p class="speaker-label"> Speaker: Troy, VP, Research & Development at Pink Elephant</p>
-							<p>Simply put, Lean and Agile both share a core philosophy of continuous improvement focused on enhancing the customer
+							<p class="speaker-label"> Speaker: Troy DuMoulin, VP, Research & Development at Pink Elephant</p>
+							<p>Simply put, Lean and Agile both share a core philosophy of continuous improvement , focused on enhancing the customer
 								value of your products and services. For Lean and Agile principles to be executed successfully, leaders must change
-								culture and often their own management behaviors, in support of the continuous improvement culture needed. That’s
-								where Steven Covey’s The 7 Habits of Highly Effective People comes in. This best-selling book is an all-time leadership
-								classic that has sold millions of copies. Covey’s model for personal and team effectiveness has changed the lives
-								of countless professionals for the better and has had a lasting business impact that is undeniable. In this informative
-								and inspirational session, Troy will look at these time-tested habits through a Lean leadership lens to explicitly
-								highlight how each of the 7 Habits (Be Proactive, Begin With The End In Mind, First Things First, Create A Win/Win,
-								Seek First To Understand, Synergize, Sharpen The Saw) relate to and support Lean principles.</p>
+								culture and often their own management behaviors, in support of the continuous improvement culture that is needed.
+								That’s where Steven Covey’s 'The 7 Habits of Highly Effective People' comes in. This best-selling book is an all-time
+								leadership classic that has sold millions of copies. Covey’s model for personal and team effectiveness has changed
+								the lives of countless professionals for the better and has had a lasting business impact that is undeniable. In
+								this informative and inspirational session, Troy will look at these time-tested habits through a Lean leadership
+								lens to explicitly highlight how each of the 7 Habits (Be Proactive, Begin With The End In Mind, First Things First,
+								Create A Win/Win, Seek First To Understand, Synergize, Sharpen The Saw) relate to and support Lean principles.</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -634,7 +729,7 @@
 								portal is, IT teams cannot stop the end users from walking up or sending them an email. This makes it incredibly
 								hard to deflect tickets. In this session, Sanjeev will talk about general best practices and actionable tips for
 								you to improve your self service adoption with Freshservice. Top session takeaways: </br> 1) Actionable tips to design
-								a self service portal </br>2) how to evolve beyond self service portals </br>3) How to customise the self service
+								a self service portal </br>2) How to evolve beyond self service portals </br>3) How to customise the self service
 								portal
 								<span class="circle"></span>
 								<span class="line dotted"></span>
@@ -737,11 +832,11 @@
 							<h6>ITSM Futures: The Inevitable Convergence of Internal and External Support</h6>
 							<p class="speaker-label"> Speaker: Stephen Mann, Principal Analyst and Content Director, ITSM.tools</p>
 							<p>There’s much to think about with the future direction of IT service management (ITSM) – from digital transformation,
-								through the management of new technologies, to dealing with people-related challenges and opportunities. And, in
-								dealing with each of these discrete areas, it’s easy to miss some of the bigger picture trends and opportunities.
-								In this presentation, Stephen will talk to many of the challenges and opportunities faced by IT support teams and
-								how the realization that the bidirectional sharing, of support good practices and the enabling technologies, between
-								internal and external support will significantly improve the operations and outcomes of both parties.</p>
+								through the management of new technologies, to dealing with people-related challenges and opportunities. While dealing
+								with each of these discrete areas, it’s easy to miss some of the bigger picture trends and opportunities. In this
+								presentation, Stephen will talk to many of the challenges and opportunities faced by IT support teams and how the
+								realization that the bidirectional sharing of support, good practices and the enabling technologies, between internal
+								and external support will significantly improve the operations and outcomes of both parties.</p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -792,7 +887,7 @@
 								with bureaucratic and lethargic global enterprises who are slow to change and create unnecessary friction for the
 								consumer. Customers are voting with their currency, choosing Uber over taxis, Amazon over the department store, Airbnb
 								over hotels, and Netflix over the network TV station. If we are not careful in IT, we will also become extinct. We
-								need to develop strategies that innovate, reduce friction and stop waiting for our customers to come to us. And knowledge
+								need to develop strategies that innovate, reduce friction and stop waiting for our customers to come to us. Knowledge
 								is the key to our success.</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
@@ -828,10 +923,10 @@
 							<h6>ITSM KPIs - Are you Measuring What Matters?</h6>
 							<p class="speaker-label">Speaker: Deepika Selvaraj, Product Manager - Freshservice @ Freshworks</p>
 							<p>As ITSM software evolve, IT leaders can track and measure almost any metric they want. It is easy to get lost in
-								the world of metrics and forget to measure what actually metters. In this session, Deepika will talk about importance
+								the world of metrics and forget to measure what actually matters. In this session, Deepika will talk about importance
 								of measuring the right metric to drive the right behavior and how to measure those metrics within Freshservice's
-								powerful reporting suite. Top takeaways: </br> 1) How to define which metrics to measure </br> 2) Top metrics that
-								drive the right behavior</br> 3) Operational knowledge of Freshservice Reporting </p>
+								powerful reporting suite. Top takeaways: </br> 1) How to define which metrics is to be measured </br> 2) Top metrics
+								that drive the right behavior</br> 3) Operational knowledge of Freshservice Reporting </p>
 							<span class="circle"></span>
 							<span class="line"></span>
 						</div>
@@ -868,7 +963,7 @@
 							<p> Praveen Raj, Product Consultant Presales – Freshservice @ Freshworks</p>
 							<p>In today's world of APIs and SDKs, ITSM tools cannot function in a silo. Freshservice marketplace capabilities
 								enables you to build apps on top of Freshservice and connect to other applications. In this session, Praveen will
-								explain the marketplace caplabilities and demonstrate how to build a simple custom app. Top takeaways:</br> 1) Good
+								explain the marketplace capabilities and demonstrate how to build a simple custom app. Top takeaways:</br> 1) Good
 								understanding of Freshservice SDK capabilities </br> 2) Common usecases and examples of custom apps </br> 3) Knowhow
 								of building a simple custom app</p>
 							<span class="circle"></span>
@@ -1031,7 +1126,8 @@
 						<div class="cell">
 							<span class="label red">Product</span>
 							<h6>Deep Dive - Engage, Close and Nurture with Freshsales</h6>
-							<p>Speakers: Sreelesh, General Manager - Freshworks, Australia </br> Srikrishnan, Head of Product - Freshchat, Freshworks</p>
+							<p class="speaker-label">Speakers: Sreelesh, General Manager - Freshworks, Australia </br> Srikrishnan, Head of Product
+								- Freshchat, Freshworks</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -1142,8 +1238,8 @@
 						<div class="cell">
 							<span class="label red">Product</span>
 							<h6>Q&A Session with Sales admins</h6>
-							<p>Speakers: Srivatsan, Director - Product Management – Freshsales @ Freshworks </br> Swati Sharma, Product Manager
-								– Freshsales, Freshworks </br> Prem, Solution Architect - Freshsales @ Freshworks</p>
+							<p class="speaker-label">Speakers: Srivatsan, Director - Product Management – Freshsales @ Freshworks </br> Swati
+								Sharma, Product Manager – Freshsales, Freshworks </br> Prem, Solution Architect - Freshsales @ Freshworks</p>
 							<span class="circle"></span>
 							<span class="line dotted"></span>
 						</div>
@@ -1427,9 +1523,9 @@
 							<span class="circle fill"></span>
 						</div>
 					</li>
-					
-				
-					
+
+
+
 				</ul>
 				<ul class="track-list">
 					<li class="row">
@@ -1994,7 +2090,7 @@
 									Future of Freshdesk - Freshdesk Roadmap
 
 								</h5>
-								<div class="chunk"> Gireesh, Director - Product Management, Freshdesk @ Freshworks</div>
+								<div class="chunk"> <i>Gireesh, Director - Product Management, Freshdesk @ Freshworks</i></div>
 							</div>
 						</div>
 					</article>
@@ -2054,16 +2150,17 @@
 		</div>
 	</div>
 
+	
 	<script>
 		function selectTab(tabId, elm) {
 
 
-			createmobileversion()
-			var menuitems = {
+			//createmobileversion()
+			menuitems = {
 				'Freshdesk': { 'menucolor': '25C16F', 'fillbg': '#E9F8F0' },
 				'Freshservice': { 'menucolor': '08C7FB', 'fillbg': '#E5F9FE' },
 				'Freshsales': { 'menucolor': 'FFA800', 'fillbg': '#FFF6E4' },
-				'Marketplace': { 'menucolor': '3973E6', 'fillbg': '#EBF1FC' }
+				'Partners': { 'menucolor': '3973E6', 'fillbg': '#EBF1FC' }
 			}
 
 			var tab_links = document.getElementsByClassName('tab-link'),
@@ -2075,27 +2172,39 @@
 			}
 
 			elm.classList.add('active');
+
+
+
 			$(".tabmenus a").css({ 'background-color': '#fff' }, { 'color': '#4d4d4d' })
 			document.getElementById(tabId).classList.add('active');
 			var applycolor = menuitems[$(elm).text()];
-			//alert(applycolor)
+			$(".seletedoption").css('color', "#" + applycolor.menucolor)
 
 			$(elm).css('background-color', "#" + applycolor.menucolor)
 
 			$(".circle").css({ 'background-color': applycolor.fillbg, 'border': '1px solid' })
 			$(".circle").css({ 'background-color': applycolor.fillbg, 'border-color': "#" + applycolor.menucolor })
-			//$(".circle").css('border', 'solid 1px '+applycolor.menucolor);
-			//$(".circle.fill").css({'background-color': "#" +applycolor.menucolor,'background-color':applycolor.fillbg})
 
 
 			$(".cell p").each(function (i, k) {
+			
 				if ($(k).text().length > 400) {
-					$(k).parent().find('.readmore').remove().end().append("<a class='readmore'>Read more...</a>")
+					 
+				
+					$(k).parent().find('.readmore').remove().end().append("<a  style='color :#"+applycolor.menucolor +";' class='readmore'>Read more...</a>")
 					$(k).addClass('agenda-desc')
 				}
-				//console.log('k',k)
+				
 
 			})
+
+			$(".cell .speaker-label").each(function (i, k) {
+				$(k).html('<p><span class="speakerspan">Speaker: </span>'+$(k).text().replace('Speaker:','')+'</p>')
+			})
+
+		
+
+			$(".readmore").css('color', "#" + applycolor.menucolor)
 
 
 
